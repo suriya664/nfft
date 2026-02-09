@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Collections | Digital Art NFT Platform</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/nolan/64/nft.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#8B5CF6', cyan: '#06B6D4', pink: '#EC4899', dark: '#0B0E14' }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/theme.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-dark text-white font-['Inter']">
+
+    <!-- NAVIGATION -->
+    <nav
+        class="fixed top-0 left-0 w-full z-50 glass border-b border-white/10 px-6 lg:px-12 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2 group">
+            <div
+                class="w-10 h-10 bg-gradient-to-br from-cyan to-primary rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="zap" class="text-white w-6 h-6"></i>
+            </div>
+            <span
+                class="text-2xl font-['Outfit'] font-extrabold tracking-tight group-hover:text-cyan transition-colors">ART<span
+                    class="text-primary">NFT</span></span>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-8 ml-8">
+            <a href="index.html" class="text-white/70 hover:text-white transition-all">Home</a>
+            <a href="explore.html" class="text-white/70 hover:text-white transition-all">Explore</a>
+            <a href="artists.html" class="text-white/70 hover:text-white transition-all">Artists</a>
+            <a href="collections.html"
+                class="text-cyan font-semibold border-b-2 border-cyan pb-1 transition-all">Collections</a>
+            <a href="auctions.html" class="text-white/70 hover:text-white transition-all">Drops</a>
+            <a href="about.html" class="text-white/70 hover:text-white transition-all">About</a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-6">
+            <button
+                class="theme-toggle w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-white transition-all transform hover:rotate-12">
+                <i data-lucide="moon" class="w-5 h-5"></i>
+            </button>
+            <a href="login.html" class="text-white font-medium hover:text-primary transition-colors">Login</a>
+            <a href="dashboard.html" class="btn-premium btn-primary text-sm">Connect Wallet</a>
+        </div>
+
+        <button id="menu-toggle" class="lg:hidden text-white p-2">
+            <i data-lucide="menu" class="w-8 h-8"></i>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU (Left Slide) -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-dark/95 backdrop-blur-xl lg:hidden flex flex-col p-8 w-[80%] max-w-[320px] h-screen border-r border-white/10">
+        <div class="flex items-center justify-between mb-12">
+            <span class="text-2xl font-['Outfit'] font-bold">ART<span class="text-primary">NFT</span></span>
+            <button id="menu-close" class="text-white"><i data-lucide="x" class="w-8 h-8"></i></button>
+        </div>
+        <div class="flex flex-col gap-6 text-xl">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="artists.html">Artists</a>
+            <a href="collections.html" class="text-cyan font-bold">Collections</a>
+            <a href="auctions.html">Drops</a>
+            <hr class="border-white/10 my-4">
+            <a href="login.html" class="btn-premium btn-outline text-lg">Login</a>
+            <a href="dashboard.html" class="btn-premium btn-primary text-lg">Connect Wallet</a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="mt-[80px]">
+
+        <!-- 1. COLLECTIONS HERO -->
+        <section class="relative py-20 px-6 text-center bg-gradient-to-b from-cyan/10 to-transparent">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=2000"
+                    class="w-full h-full object-cover opacity-20" alt="BG">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-dark"></div>
+            </div>
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <h1 class="text-6xl md:text-8xl font-['Outfit'] font-extrabold mb-8 tracking-tighter">
+                    Premium <span class="text-gradient">Collections</span>
+                </h1>
+                <p class="text-xl text-white/50 max-w-2xl mx-auto leading-relaxed">Discover curated sets of
+                    high-fidelity digital assets. Each collection is a unique world built by master artists.</p>
+            </div>
+        </section>
+
+        <!-- 2. FEATURED COLLECTIONS GRID -->
+        <section class="py-24 px-6 lg:px-12 bg-dark">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+                <!-- Coll 1: Neo-Luxe Abstract -->
+                <div class="glass-card group p-4 rounded-[40px] cursor-pointer">
+                    <div class="grid grid-cols-2 gap-2 mb-6 h-[250px] rounded-3xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400"
+                            class="w-full h-full object-cover border-r border-white/5" alt="C1">
+                        <div class="grid grid-rows-2 gap-2">
+                            <img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80&w=400"
+                                class="w-full h-full object-cover border-b border-white/5" alt="C2">
+                            <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=400"
+                                class="w-full h-full object-cover" alt="C3">
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Neo-Luxe Abstract
+                        </h3>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="https://i.pravatar.cc/100?u=c1" class="w-8 h-8 rounded-full" alt="A">
+                                <span class="text-sm font-bold">@LuxeArt</span>
+                            </div>
+                            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/40">12 Items</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Coll 2: Cyber Glitch Core -->
+                <div class="glass-card group p-4 rounded-[40px] cursor-pointer">
+                    <div class="grid grid-cols-2 gap-2 mb-6 h-[250px] rounded-3xl overflow-hidden">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.Eubp2tbdA3TBDA-vplZVGAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="w-full h-full object-cover border-r border-white/5" alt="C1">
+                        <div class="grid grid-rows-2 gap-2">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.uBGoSMunShRxS4f1QvNZcAHaHa?w=626&h=626&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                class="w-full h-full object-cover border-b border-white/5" alt="C2">
+                            <img src="https://images.unsplash.com/photo-1614850715649-1d0106293bd1?q=80&w=400"
+                                class="w-full h-full object-cover" alt="C3">
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan transition-colors">Cyber Glitch Core
+                        </h3>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="https://i.pravatar.cc/100?u=c2" class="w-8 h-8 rounded-full" alt="A">
+                                <span class="text-sm font-bold">@GlitchKng</span>
+                            </div>
+                            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/40">24 Items</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Coll 3: Digital Wilderness -->
+                <div class="glass-card group p-4 rounded-[40px] cursor-pointer">
+                    <div class="grid grid-cols-2 gap-2 mb-6 h-[250px] rounded-3xl overflow-hidden">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.zsiw-ytfirMBGIWPPOBqQgHaKX?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="w-full h-full object-cover border-r border-white/5" alt="C1">
+                        <div class="grid grid-rows-2 gap-2">
+                            <img src="https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=400&auto=format&fit=crop"
+                                class="w-full h-full object-cover border-b border-white/5" alt="C2">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=400"
+                                class="w-full h-full object-cover" alt="C3">
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-pink transition-colors">Digital Wilderness
+                        </h3>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="https://i.pravatar.cc/100?u=c3" class="w-8 h-8 rounded-full" alt="A">
+                                <span class="text-sm font-bold">@ForestA</span>
+                            </div>
+                            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/40">18 Items</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Coll 4: Ethereal Vistas -->
+                <div class="glass-card group p-4 rounded-[40px] cursor-pointer">
+                    <div class="grid grid-cols-2 gap-2 mb-6 h-[250px] rounded-3xl overflow-hidden">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.W-pQ8es9l3gOX03mvqpprwHaD5?w=626&h=330&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="w-full h-full object-cover border-r border-white/5" alt="C1">
+                        <div class="grid grid-rows-2 gap-2">
+                            <img src="https://tse1.mm.bing.net/th/id/OIP.ZdF19pFKCk2aIpLImKF8fQHaEW?w=1674&h=983&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                class="w-full h-full object-cover border-b border-white/5" alt="C2">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.Oif_zAu2jLy_vk2TeEd4NQHaE7?w=626&h=417&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                class="w-full h-full object-cover" alt="C3">
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Ethereal Vistas
+                        </h3>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="https://i.pravatar.cc/100?u=c4" class="w-8 h-8 rounded-full" alt="A">
+                                <span class="text-sm font-bold">@Etheria</span>
+                            </div>
+                            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/40">32 Items</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Coll 5: Oceanic Synthesis -->
+                <div class="glass-card group p-4 rounded-[40px] cursor-pointer">
+                    <div class="grid grid-cols-2 gap-2 mb-6 h-[250px] rounded-3xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=400"
+                            class="w-full h-full object-cover border-r border-white/5" alt="C1">
+                        <div class="grid grid-rows-2 gap-2">
+                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400"
+                                class="w-full h-full object-cover border-b border-white/5" alt="C2">
+                            <img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80&w=400"
+                                class="w-full h-full object-cover" alt="C3">
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan transition-colors">Oceanic Synthesis
+                        </h3>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="https://i.pravatar.cc/100?u=c5" class="w-8 h-8 rounded-full" alt="A">
+                                <span class="text-sm font-bold">@DeepSea</span>
+                            </div>
+                            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/40">15 Items</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Coll 6: Minimalist Solids -->
+                <div class="glass-card group p-4 rounded-[40px] cursor-pointer">
+                    <div class="grid grid-cols-2 gap-2 mb-6 h-[250px] rounded-3xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=400"
+                            class="w-full h-full object-cover border-r border-white/5" alt="C1">
+                        <div class="grid grid-rows-2 gap-2">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=400"
+                                class="w-full h-full object-cover border-b border-white/5" alt="C2">
+                            <img src="https://static.vecteezy.com/system/resources/previews/027/860/789/large_2x/golden-and-black-abstract-objects-3d-rendering-photo.jpg"
+                                class="w-full h-full object-cover" alt="C3">
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-pink transition-colors">Minimalist Solids
+                        </h3>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <img src="https://i.pravatar.cc/100?u=c6" class="w-8 h-8 rounded-full" alt="A">
+                                <span class="text-sm font-bold">@Simplex</span>
+                            </div>
+                            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/40">8 Items</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. TRENDING SLIDER -->
+        <section class="py-24 px-6 lg:px-12 bg-dark/50">
+            <h2 class="text-4xl font-['Outfit'] font-bold mb-16 text-center">Trending <span
+                    class="text-cyan">Series</span></h2>
+            <div class="flex gap-10 overflow-x-auto pb-10 no-scrollbar">
+                <!-- Wide banner collection cards -->
+                <div class="min-w-[600px] h-[350px] relative rounded-[40px] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1200&auto=format&fit=crop"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" alt="B1">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent p-12 flex flex-col justify-end">
+                        <p class="text-cyan font-bold uppercase tracking-widest text-xs mb-2">Exclusive Drop</p>
+                        <h3 class="text-4xl font-extrabold mb-4">Astral Entities</h3>
+                        <div class="flex items-center justify-between">
+                            <span class="text-white/60">Curated by @Galactic</span>
+                            <button class="btn-premium btn-primary text-sm px-8">View Collection</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[600px] h-[350px] relative rounded-[40px] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" alt="B2">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent p-12 flex flex-col justify-end">
+                        <p class="text-pink font-bold uppercase tracking-widest text-xs mb-2">New Arrival</p>
+                        <h3 class="text-4xl font-extrabold mb-4">Cyber Renaissance</h3>
+                        <div class="flex items-center justify-between">
+                            <span class="text-white/60">Curated by @NeoT</span>
+                            <button class="btn-premium btn-primary text-sm px-8">View Collection</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. COLLECTION CATEGORIES (Interactive pills) -->
+        <section class="py-12 px-6 lg:px-12 relative text-center">
+            <h2 class="text-4xl font-['Outfit'] font-bold mb-12">Search by <span class="text-primary">Interest</span>
+            </h2>
+            <div class="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
+                <button
+                    class="px-10 py-5 rounded-3xl glass border border-white/10 hover:border-primary hover:text-primary font-bold transition-all">All
+                    Genres</button>
+                <button
+                    class="px-10 py-5 rounded-3xl glass border border-white/10 hover:border-cyan hover:text-cyan font-bold transition-all">3D
+                    Renderings</button>
+                <button
+                    class="px-10 py-5 rounded-3xl glass border border-white/10 hover:border-pink hover:text-pink font-bold transition-all">Digital
+                    Painting</button>
+                <button
+                    class="px-10 py-5 rounded-3xl glass border border-white/10 hover:border-white hover:text-white font-bold transition-all">Generative
+                    Art</button>
+                <button
+                    class="px-10 py-5 rounded-3xl glass border border-white/10 hover:border-primary hover:text-primary font-bold transition-all">Photography</button>
+                <button
+                    class="px-10 py-5 rounded-3xl glass border border-white/10 hover:border-cyan hover:text-cyan font-bold transition-all">Illustration</button>
+                <button
+                    class="px-10 py-5 rounded-3xl glass border border-white/10 hover:border-pink hover:text-pink font-bold transition-all">Animation</button>
+            </div>
+        </section>
+
+        <!-- 5. COLLECTION PREVIEW CARDS (Detailed List) -->
+        <section class="py-24 px-6 lg:px-12 bg-dark/50">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Detailed Card 1 -->
+                <div
+                    class="glass-card p-10 rounded-[48px] flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-primary/30 transition-all">
+                    <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=400"
+                        class="w-full md:w-1/3 aspect-square object-cover rounded-[32px]" alt="PC">
+                    <div class="flex-1">
+                        <h4 class="text-3xl font-extrabold mb-2">Liquid Reality</h4>
+                        <p class="text-white/40 mb-6 line-clamp-2">Exploring the boundaries of fluid dynamics and
+                            virtual perception. A collection of 150 unique pieces.</p>
+                        <div class="flex gap-6 mb-8">
+                            <div>
+                                <p class="text-xs text-white/40 font-bold uppercase mb-1">Floor</p>
+                                <p class="text-2xl font-bold">1.2 ETH</p>
+                            </div>
+                            <div class="border-l border-white/10 pl-6">
+                                <p class="text-xs text-white/40 font-bold uppercase mb-1">Owners</p>
+                                <p class="text-2xl font-bold">842</p>
+                            </div>
+                        </div>
+                        <button class="w-full btn-premium btn-primary">Check Details</button>
+                    </div>
+                </div>
+                <!-- Detailed Card 2 -->
+                <div
+                    class="glass-card p-10 rounded-[48px] flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-cyan/30 transition-all">
+                    <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=400"
+                        class="w-full md:w-1/3 aspect-square object-cover rounded-[32px]" alt="PC">
+                    <div class="flex-1">
+                        <h4 class="text-3xl font-extrabold mb-2">Neon Knights</h4>
+                        <p class="text-white/40 mb-6 line-clamp-2">Sovereign defenders of the digital frontier.
+                            Hand-drawn characters with procedural armor.</p>
+                        <div class="flex gap-6 mb-8">
+                            <div>
+                                <p class="text-xs text-white/40 font-bold uppercase mb-1">Floor</p>
+                                <p class="text-2xl font-bold">0.85 ETH</p>
+                            </div>
+                            <div class="border-l border-white/10 pl-6">
+                                <p class="text-xs text-white/40 font-bold uppercase mb-1">Owners</p>
+                                <p class="text-2xl font-bold">1.2k</p>
+                            </div>
+                        </div>
+                        <button class="w-full btn-premium btn-primary">Check Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. TOP COLLECTIONS LEADERBOARD -->
+        <section class="py-24 px-6 lg:px-24">
+            <h2 class="text-4xl font-['Outfit'] font-bold mb-16 text-center">Top <span class="text-cyan">Volume</span>
+                Stats</h2>
+            <div class="glass rounded-[40px] overflow-hidden border border-white/10">
+                <table class="w-full text-left">
+                    <thead class="bg-white/5 border-b border-white/10">
+                        <tr>
+                            <th class="p-8 font-bold text-white/40 uppercase tracking-widest text-xs">Collection</th>
+                            <th class="p-8 font-bold text-white/40 uppercase tracking-widest text-xs">Volume</th>
+                            <th class="p-8 font-bold text-white/40 uppercase tracking-widest text-xs">24h%</th>
+                            <th class="p-8 font-bold text-white/40 uppercase tracking-widest text-xs">Floor Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors cursor-pointer">
+                            <td class="p-8 flex items-center gap-4">
+                                <span class="font-bold text-white/20">1</span>
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=100"
+                                    class="w-12 h-12 rounded-xl" alt="L">
+                                <span class="font-bold">Space Drifters</span>
+                            </td>
+                            <td class="p-8 font-bold">12,450 ETH</td>
+                            <td class="p-8 text-green-400 font-bold">+12.5%</td>
+                            <td class="p-8 font-bold">4.2 ETH</td>
+                        </tr>
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors cursor-pointer">
+                            <td class="p-8 flex items-center gap-4">
+                                <span class="font-bold text-white/20">2</span>
+                                <img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80&w=100"
+                                    class="w-12 h-12 rounded-xl" alt="L">
+                                <span class="font-bold">Prism Shards</span>
+                            </td>
+                            <td class="p-8 font-bold">8,920 ETH</td>
+                            <td class="p-8 text-red-400 font-bold">-2.4%</td>
+                            <td class="p-8 font-bold">1.8 ETH</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors cursor-pointer">
+                            <td class="p-8 flex items-center gap-4">
+                                <span class="font-bold text-white/20">3</span>
+                                <img src="https://images.unsplash.com/photo-1635322966219-b75ed372eb3c?q=80&w=100&auto=format&fit=crop"
+                                    class="w-12 h-12 rounded-xl" alt="L">
+                                <span class="font-bold">Cyber Samurai</span>
+                            </td>
+                            <td class="p-8 font-bold">7,140 ETH</td>
+                            <td class="p-8 text-green-400 font-bold">+5.8%</td>
+                            <td class="p-8 font-bold">2.9 ETH</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 2. SEARCH & TABS -->
+        <section class="py-8 px-6 lg:px-12 glass border-y border-white/10 sticky top-[80px] z-40">
+            <h2 class="text-4xl font-['Outfit'] font-bold mb-16 px-4">Latest <span class="text-pink">Mints</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+                <img src="https://mindmatters.ai/wp-content/uploads/sites/2/2021/08/non-fungible-token-hologram-on-virtual-digital-screen-nft-with-network-circuit-and-globe-dark-background-concept-of-cryptoart-and-technology-stockpack-adobe-stock-scaled.jpg"
+                    class="aspect-square object-cover rounded-2xl hover:scale-110 transition-all border border-white/5"
+                    alt="m">
+
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop"
+                    class="aspect-square object-cover rounded-2xl hover:scale-110 transition-all border border-white/5"
+                    alt="m">
+                <img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80&w=400&auto=format&fit=crop"
+                    class="aspect-square object-cover rounded-2xl hover:scale-110 transition-all border border-white/5"
+                    alt="m">
+                <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=400&auto=format&fit=crop"
+                    class="aspect-square object-cover rounded-2xl hover:scale-110 transition-all border border-white/5"
+                    alt="m">
+                <img src="https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=400&auto=format&fit=crop"
+                    class="aspect-square object-cover rounded-2xl hover:scale-110 transition-all border border-white/5"
+                    alt="m">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=400"
+                    class="aspect-square object-cover rounded-2xl hover:scale-110 transition-all border border-white/5"
+                    alt="m">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.zmfnpgzewo8FoCmLp-qbMAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="aspect-square object-cover rounded-2xl hover:scale-110 transition-all border border-white/5"
+                    alt="m">
+            </div>
+        </section>
+
+        <!-- 8. CTA CREATE COLLECTION -->
+        <section class="py-24 px-6 lg:px-24">
+            <div
+                class="glass-card bg-gradient-to-br from-primary/40 to-cyan/40 p-16 lg:p-32 rounded-[60px] text-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10">
+                    <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=2000"
+                        class="w-full h-full object-cover" alt="X">
+                </div>
+                <div class="relative z-10">
+                    <h2 class="text-6xl font-['Outfit'] font-extrabold mb-8 leading-tight">Bring Your World <br> <span
+                            class="text-white">To Life</span></h2>
+                    <p class="text-2xl text-white/70 mb-12 max-w-2xl mx-auto">Launch your official NFT collection with
+                        dedicated support, custom branding, and early access to drops.</p>
+                    <button class="btn-premium btn-primary px-16 text-xl shadow-[0_0_50px_rgba(139,92,246,0.5)]">Start
+                        Collection</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark/80 pt-24 pb-12 px-6 lg:px-24 border-t border-white/10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+            <!-- Brand Info -->
+            <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                <a href="index.html" class="flex items-center gap-2 mb-8 group">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-cyan to-primary rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="text-white w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl font-['Outfit'] font-extrabold tracking-tight">ART<span
+                            class="text-primary">NFT</span></span>
+                </a>
+                <p class="text-white/50 leading-relaxed mb-10 text-lg">
+                    The world's most innovative NFT marketplace for professional digital artists and high-tier
+                    collectors. Experience Web3 art like never before.
+                </p>
+                <!-- Socials -->
+                <div class="flex gap-5">
+                    <a href="#"
+                        class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-cyan hover:border-cyan hover:-translate-y-2 transition-all"><i
+                            data-lucide="twitter"></i></a>
+                    <a href="#"
+                        class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-primary hover:border-primary hover:-translate-y-2 transition-all"><i
+                            data-lucide="instagram"></i></a>
+                    <a href="#"
+                        class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-pink hover:border-pink hover:-translate-y-2 transition-all"><i
+                            data-lucide="github"></i></a>
+                    <a href="#"
+                        class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-white hover:border-white hover:-translate-y-2 transition-all"><i
+                            data-lucide="discord"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="flex flex-col gap-6">
+                <h4 class="text-2xl font-bold mb-4 font-['Outfit']">Marketplace</h4>
+                <a href="explore.html" class="text-white/50 hover:text-cyan transition-all w-fit">All NFTs</a>
+                <a href="collections.html" class="text-white/50 hover:text-cyan transition-all w-fit">Collections</a>
+                <a href="explore.html" class="text-white/50 hover:text-cyan transition-all w-fit">Photography</a>
+                <a href="auctions.html" class="text-white/50 hover:text-cyan transition-all w-fit">Live Auctions</a>
+                <a href="explore.html" class="text-white/50 hover:text-cyan transition-all w-fit">Virtual Reality</a>
+            </div>
+
+            <!-- Platform Links -->
+            <div class="flex flex-col gap-6">
+                <h4 class="text-2xl font-bold mb-4 font-['Outfit']">Platform</h4>
+                <a href="about.html" class="text-white/50 hover:text-primary transition-all w-fit">About Us</a>
+                <a href="blog.html" class="text-white/50 hover:text-primary transition-all w-fit">Latest News</a>
+                <a href="contact.html" class="text-white/50 hover:text-primary transition-all w-fit">Support Center</a>
+                <a href="about.html" class="text-white/50 hover:text-primary transition-all w-fit">Platform Story</a>
+                <a href="about.html" class="text-white/50 hover:text-primary transition-all w-fit">Roadmap</a>
+            </div>
+
+            <!-- More Links -->
+            <div class="flex flex-col gap-6">
+                <h4 class="text-2xl font-bold mb-4 font-['Outfit']">Community</h4>
+                <a href="#" class="text-white/50 hover:text-pink transition-all w-fit">Artists Hub</a>
+                <a href="#" class="text-white/50 hover:text-pink transition-all w-fit">Partner Programs</a>
+                <a href="#" class="text-white/50 hover:text-pink transition-all w-fit">Affiliates</a>
+                <a href="#" class="text-white/50 hover:text-pink transition-all w-fit">Developer API</a>
+                <a href="#" class="text-white/50 hover:text-pink transition-all w-fit">Careers</a>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div
+            class="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-12 text-white/30 font-medium">
+            <p>© 2026 Digital Art NFT Platform. All rights reserved.</p>
+            <div class="flex gap-10 mt-6 md:mt-0">
+                <a href="#" class="hover:text-white transition-all">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-all">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-all">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('menu-toggle');
+        const closeBtn = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn?.addEventListener('click', () => mobileMenu.classList.add('active'));
+        closeBtn?.addEventListener('click', () => mobileMenu.classList.remove('active'));
+    </script>
+</body>
+
+</html>

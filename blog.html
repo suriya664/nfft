@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform News & Blog | Digital Art NFT Platform</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/nolan/64/nft.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#8B5CF6', cyan: '#06B6D4', pink: '#EC4899', dark: '#0B0E14' }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/theme.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-dark text-white font-['Inter']">
+
+    <!-- NAVIGATION -->
+    <nav
+        class="fixed top-0 left-0 w-full z-50 glass border-b border-white/10 px-6 lg:px-12 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2 group">
+            <div
+                class="w-10 h-10 bg-gradient-to-br from-cyan to-primary rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="zap" class="text-white w-6 h-6"></i>
+            </div>
+            <span
+                class="text-2xl font-['Outfit'] font-extrabold tracking-tight group-hover:text-cyan transition-colors">ART<span
+                    class="text-primary">NFT</span></span>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-8 ml-8">
+            <a href="index.html" class="text-white/70 hover:text-white transition-all">Home</a>
+            <a href="explore.html" class="text-white/70 hover:text-white transition-all">Explore</a>
+            <a href="artists.html" class="text-white/70 hover:text-white transition-all">Artists</a>
+            <a href="collections.html" class="text-white/70 hover:text-white transition-all">Collections</a>
+            <a href="auctions.html" class="text-white/70 hover:text-white transition-all">Drops</a>
+            <a href="about.html" class="text-white/70 hover:text-white transition-all">About</a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-6">
+            <button
+                class="theme-toggle w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-white transition-all transform hover:rotate-12">
+                <i data-lucide="moon" class="w-5 h-5"></i>
+            </button>
+            <a href="login.html" class="text-white font-medium hover:text-primary transition-colors">Login</a>
+            <a href="dashboard.html" class="btn-premium btn-primary text-sm">Connect Wallet</a>
+        </div>
+
+        <button id="menu-toggle" class="lg:hidden text-white p-2">
+            <i data-lucide="menu" class="w-8 h-8"></i>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU (Left Slide) -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-dark/95 backdrop-blur-xl lg:hidden flex flex-col p-8 w-[80%] max-w-[320px] h-screen border-r border-white/10">
+        <div class="flex items-center justify-between mb-12">
+            <span class="text-2xl font-['Outfit'] font-bold">ART<span class="text-primary">NFT</span></span>
+            <button id="menu-close" class="text-white"><i data-lucide="x" class="w-8 h-8"></i></button>
+        </div>
+        <div class="flex flex-col gap-6 text-xl">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="artists.html">Artists</a>
+            <a href="collections.html">Collections</a>
+            <a href="auctions.html">Drops</a>
+            <hr class="border-white/10 my-4">
+            <a href="login.html" class="btn-premium btn-outline text-lg">Login</a>
+            <a href="dashboard.html" class="btn-premium btn-primary text-lg">Connect Wallet</a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="mt-[80px]">
+
+        <!-- 1. BLOG HERO (Centralized - Guideline 31) -->
+        <section class="relative py-28 px-6 text-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2000"
+                    class="w-full h-full object-cover opacity-20" alt="BG">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-dark"></div>
+            </div>
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <h1 class="text-6xl md:text-8xl font-['Outfit'] font-extrabold mb-8 tracking-tighter">
+                    Insights & <span class="text-gradient">Narratives</span>
+                </h1>
+                <p class="text-xl text-white/50 max-w-2xl mx-auto leading-relaxed">Deep dives into Web3 culture, artist
+                    spotlight, and the technology shaping the future of digital rarity.</p>
+            </div>
+        </section>
+
+        <!-- 2. FEATURED POST SLIDER (Large) -->
+        <section class="py-24 px-6 lg:px-12 bg-dark">
+            <div
+                class="glass-card rounded-[60px] p-4 lg:p-8 flex flex-col xl:flex-row gap-12 overflow-hidden border border-white/5 items-center">
+                <img src="https://images.unsplash.com/photo-1614850715649-1d0106293bd1?q=80&w=1200"
+                    class="w-full xl:w-1/2 aspect-[16/9] object-cover rounded-[48px]" alt="Post">
+                <div class="xl:w-1/2 p-8">
+                    <span class="text-cyan font-bold uppercase tracking-widest text-sm mb-4 block">Featured
+                        Article</span>
+                    <h2 class="text-5xl font-['Outfit'] font-extrabold mb-6 leading-tight">The Rise of <br> <span
+                            class="text-primary">Generative Mastery</span></h2>
+                    <p class="text-xl text-white/40 mb-10 leading-relaxed">How procedural algorithms are challenging our
+                        traditional definitions of creativity and ownership in the age of AI.</p>
+                    <div class="flex items-center gap-4 mb-10">
+                        <img src="https://i.pravatar.cc/100?u=writer1" class="w-12 h-12 rounded-full" alt="W">
+                        <div>
+                            <p class="font-bold">Julian Vantrose</p>
+                            <p class="text-xs text-white/40">12 Feb 2026 • 8 min read</p>
+                        </div>
+                    </div>
+                    <button class="btn-premium btn-primary px-12">Read Full Article</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. LATEST ARTICLES GRID -->
+        <section class="py-24 px-6 lg:px-12 bg-dark/50">
+            <h2 class="text-4xl font-['Outfit'] font-bold mb-16">Latest <span class="text-pink">Stories</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Blog Card 1 -->
+                <div class="glass-p group cursor-pointer">
+                    <div class="relative rounded-[32px] overflow-hidden mb-8 h-[250px]">
+                        <img src="https://images.unsplash.com/photo-1643101808620-e4b85590987c?q=80&w=600"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+                            alt="B1">
+                        <div class="absolute top-4 left-4 bg-primary text-white p-2 px-4 rounded-xl text-xs font-bold">
+                            Web3 Tech</div>
+                    </div>
+                    <div class="px-2">
+                        <h4 class="text-2xl font-bold mb-4 group-hover:text-cyan transition-colors">Gas Fees: The Global
+                            Bridge</h4>
+                        <p class="text-white/40 line-clamp-2 mb-6">Understanding how Layer 2 scaling is democratizing
+                            access to high-tier NFT collecting.</p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://i.pravatar.cc/100?u=w2" class="w-8 h-8 rounded-full" alt="W">
+                            <span class="text-xs font-bold opacity-60">By Sarah J. • 5 min ago</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 2 -->
+                <div class="glass-p group cursor-pointer">
+                    <div class="relative rounded-[32px] overflow-hidden mb-8 h-[250px]">
+                        <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=600"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+                            alt="B1">
+                        <div class="absolute top-4 left-4 bg-pink text-white p-2 px-4 rounded-xl text-xs font-bold">
+                            Culture</div>
+                    </div>
+                    <div class="px-2">
+                        <h4 class="text-2xl font-bold mb-4 group-hover:text-cyan transition-colors">The Aesthetic of
+                            Void</h4>
+                        <p class="text-white/40 line-clamp-2 mb-6">Why minimalism is dominating the futuristic art
+                            movement in the digital space.</p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://i.pravatar.cc/100?u=w3" class="w-8 h-8 rounded-full" alt="W">
+                            <span class="text-xs font-bold opacity-60">By Alex R. • 2h ago</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 3 -->
+                <div class="glass-p group cursor-pointer">
+                    <div class="relative rounded-[32px] overflow-hidden mb-8 h-[250px]">
+                        <img src="https://images.unsplash.com/photo-1547891269-0512a14596d3?q=80&w=600"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+                            alt="B1">
+                        <div class="absolute top-4 left-4 bg-cyan text-white p-2 px-4 rounded-xl text-xs font-bold">
+                            Interviews</div>
+                    </div>
+                    <div class="px-2">
+                        <h4 class="text-2xl font-bold mb-4 group-hover:text-cyan transition-colors">Talking 3D with
+                            Gen_X</h4>
+                        <p class="text-white/40 line-clamp-2 mb-6">An exclusive interview with the creator of "Astral
+                            Entities" on his process.</p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://i.pravatar.cc/100?u=w4" class="w-8 h-8 rounded-full" alt="W">
+                            <span class="text-xs font-bold opacity-60">By Team • 1d ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. TOP CATEGORIES (Pills) -->
+        <section class="py-24 px-6 lg:px-12 bg-dark">
+            <h3 class="text-3xl font-['Outfit'] font-bold mb-10 text-center">Popular <span
+                    class="text-primary">Topics</span></h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="glass px-8 py-3 rounded-full hover:bg-primary transition-all font-bold">Market
+                    Analysis</button>
+                <button class="glass px-8 py-3 rounded-full hover:bg-cyan transition-all font-bold">Artist
+                    Spotlight</button>
+                <button class="glass px-8 py-3 rounded-full hover:bg-pink transition-all font-bold">Tech Deep
+                    Dives</button>
+                <button class="glass px-8 py-3 rounded-full hover:bg-white/10 transition-all font-bold">Community
+                    News</button>
+                <button class="glass px-8 py-3 rounded-full hover:bg-primary transition-all font-bold">Investment
+                    Guide</button>
+            </div>
+        </section>
+
+        <!-- 5. POPULAR POSTS SPOTLIGHT (Large Item) -->
+        <section class="py-24 px-6 lg:px-24">
+            <div class="relative rounded-[60px] overflow-hidden h-[600px] group cursor-pointer shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80&w=1600"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" alt="P">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent p-12 lg:p-24 flex flex-col justify-end">
+                    <span
+                        class="text-white bg-danger/0 border-b border-primary w-fit mb-4 font-bold uppercase tracking-widest text-sm">Most
+                        Read</span>
+                    <h2 class="text-5xl lg:text-7xl font-extrabold mb-8 max-w-4xl">Security in the <br> <span
+                            class="text-primary">New Frontier</span></h2>
+                    <p class="text-xl text-white/50 max-w-2xl mb-10">A comprehensive guide to protecting your assets and
+                        understanding smart contract vulnerabilities.</p>
+                    <button class="btn-premium btn-primary w-fit px-12 text-lg">Read the Guide</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. AUTHOR SPOTLIGHT (Compact - Guideline 44) -->
+        <section class="py-24 px-6 lg:px-12 bg-dark/50">
+            <h3 class="text-3xl font-['Outfit'] font-bold mb-16 text-center">Meet the <span
+                    class="text-cyan">Voices</span></h3>
+            <div class="flex flex-wrap justify-center gap-10">
+                <div class="glass p-6 rounded-3xl text-center group w-[200px]">
+                    <img src="https://i.pravatar.cc/150?u=v1"
+                        class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-white/10 group-hover:border-primary transition-all"
+                        alt="T">
+                    <h5 class="font-bold text-sm">Julian V.</h5>
+                    <p class="text-[10px] text-white/40 font-bold">Tech Editor</p>
+                </div>
+                <div class="glass p-6 rounded-3xl text-center group w-[200px]">
+                    <img src="https://i.pravatar.cc/150?u=v2"
+                        class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-white/10 group-hover:border-cyan transition-all"
+                        alt="T">
+                    <h5 class="font-bold text-sm">Sarah J.</h5>
+                    <p class="text-[10px] text-white/40 font-bold">Art Critic</p>
+                </div>
+                <div class="glass p-6 rounded-3xl text-center group w-[200px]">
+                    <img src="https://i.pravatar.cc/150?u=v3"
+                        class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-white/10 group-hover:border-pink transition-all"
+                        alt="T">
+                    <h5 class="font-bold text-sm">Alex R.</h5>
+                    <p class="text-[10px] text-white/40 font-bold">Community Voice</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. NEWSLETTER (Reuse component) -->
+        <section class="py-24 px-6 lg:px-24">
+            <div
+                class="bg-gradient-to-br from-primary/30 to-pink/30 rounded-[48px] p-12 lg:p-24 relative overflow-hidden text-center">
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <h2 class="text-5xl font-['Outfit'] font-extrabold mb-6">Stay <span
+                            class="text-gradient">Informed</span></h2>
+                    <p class="text-xl text-white/70 mb-12">Get the latest NFT insights and news delivered straight to
+                        your wallet-enabled inbox.</p>
+                    <form class="flex flex-col md:flex-row gap-4">
+                        <input type="email" placeholder="Enter your email"
+                            class="flex-1 bg-dark/50 border border-white/10 rounded-2xl px-8 h-[64px] text-white focus:outline-none focus:border-cyan">
+                        <button type="submit" class="btn-premium btn-primary h-[64px] px-12">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark/80 pt-24 pb-12 px-6 lg:px-24 border-t border-white/10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+            <!-- Brand Info -->
+            <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                <a href="index.html" class="flex items-center gap-2 mb-8 group">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-cyan to-primary rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="text-white w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl font-['Outfit'] font-extrabold tracking-tight">ART<span
+                            class="text-primary">NFT</span></span>
+                </a>
+                <p class="text-white/50 leading-relaxed mb-10 text-lg">
+                    The world's most innovative NFT marketplace for professional digital artists and high-tier
+                    collectors. Experience Web3 art like never before.
+                </p>
+                <!-- Socials -->
+                <div class="flex gap-5">
+                    <a href="#"
+                        class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-cyan hover:border-cyan hover:-translate-y-2 transition-all"><i
+                            data-lucide="twitter"></i></a>
+                    <a href="#"
+                        class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-primary hover:border-primary hover:-translate-y-2 transition-all"><i
+                            data-lucide="instagram"></i></a>
+                    <a href="#"
+                        class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-pink hover:border-pink hover:-translate-y-2 transition-all"><i
+                            data-lucide="github"></i></a>
+                    <a href="#"
+                        class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-white hover:border-white hover:-translate-y-2 transition-all"><i
+                            data-lucide="discord"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="flex flex-col gap-6">
+                <h4 class="text-2xl font-bold mb-4 font-['Outfit']">Marketplace</h4>
+                <a href="explore.html" class="text-white/50 hover:text-cyan transition-all w-fit">All NFTs</a>
+                <a href="collections.html" class="text-white/50 hover:text-cyan transition-all w-fit">Collections</a>
+                <a href="explore.html" class="text-white/50 hover:text-cyan transition-all w-fit">Photography</a>
+                <a href="auctions.html" class="text-white/50 hover:text-cyan transition-all w-fit">Live Auctions</a>
+                <a href="explore.html" class="text-white/50 hover:text-cyan transition-all w-fit">Virtual Reality</a>
+            </div>
+
+            <!-- Platform Links -->
+            <div class="flex flex-col gap-6">
+                <h4 class="text-2xl font-bold mb-4 font-['Outfit']">Platform</h4>
+                <a href="about.html" class="text-white/50 hover:text-primary transition-all w-fit">About Us</a>
+                <a href="blog.html" class="text-white/50 hover:text-primary transition-all w-fit">Latest News</a>
+                <a href="contact.html" class="text-white/50 hover:text-primary transition-all w-fit">Support Center</a>
+                <a href="about.html" class="text-white/50 hover:text-primary transition-all w-fit">Platform Story</a>
+                <a href="about.html" class="text-white/50 hover:text-primary transition-all w-fit">Roadmap</a>
+            </div>
+
+            <!-- More Links -->
+            <div class="flex flex-col gap-6">
+                <h4 class="text-2xl font-bold mb-4 font-['Outfit']">Community</h4>
+                <a href="#" class="text-white/50 hover:text-pink transition-all w-fit">Artists Hub</a>
+                <a href="#" class="text-white/50 hover:text-pink transition-all w-fit">Partner Programs</a>
+                <a href="#" class="text-white/50 hover:text-pink transition-all w-fit">Affiliates</a>
+                <a href="#" class="text-white/50 hover:text-pink transition-all w-fit">Developer API</a>
+                <a href="#" class="text-white/50 hover:text-pink transition-all w-fit">Careers</a>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div
+            class="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-12 text-white/30 font-medium">
+            <p>© 2026 Digital Art NFT Platform. All rights reserved.</p>
+            <div class="flex gap-10 mt-6 md:mt-0">
+                <a href="#" class="hover:text-white transition-all">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-all">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-all">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('menu-toggle');
+        const closeBtn = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn?.addEventListener('click', () => mobileMenu.classList.add('active'));
+        closeBtn?.addEventListener('click', () => mobileMenu.classList.remove('active'));
+    </script>
+</body>
+
+</html>
