@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFT Collections | Digital Art NFT Platform</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -55,7 +55,7 @@
                 class="theme-toggle w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-white transition-all transform hover:rotate-12">
                 <i data-lucide="moon" class="w-5 h-5"></i>
             </button>
-            <a href="login.html" class="text-white font-medium hover:text-primary transition-colors">Login</a>
+            <a href="login.html" class="btn-premium btn-outline text-sm">Login</a>
             <a href="dashboard.html" class="btn-premium btn-primary text-sm">Connect Wallet</a>
         </div>
 
@@ -75,7 +75,7 @@
             <a href="index.html">Home</a>
             <a href="explore.html">Explore</a>
             <a href="artists.html">Artists</a>
-            <a href="collections.html" class="text-cyan font-bold">Collections</a>
+            <a href="collections.html" class="text-white hover:text-cyan font-bold">Collections</a>
             <a href="auctions.html">Drops</a>
             <hr class="border-white/10 my-4">
             <a href="login.html" class="btn-premium btn-outline text-lg">Login</a>
@@ -487,13 +487,13 @@
                 <div class="flex gap-5">
                     <a href="#"
                         class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-cyan hover:border-cyan hover:-translate-y-2 transition-all"><i
-                            data-lucide="github"></i></a>
+                            data-lucide="twitter"></i></a>
                     <a href="#"
                         class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-primary hover:border-primary hover:-translate-y-2 transition-all"><i
-                            data-lucide="instagram"></i></a>
+                            data-lucide="discord"></i></a>
                     <a href="#"
                         class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-pink hover:border-pink hover:-translate-y-2 transition-all"><i
-                            data-lucide="github"></i></a>
+                            data-lucide="instagram"></i></a>
                 </div>
             </div>
 
@@ -547,6 +547,16 @@
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn?.addEventListener('click', () => mobileMenu.classList.add('active'));
         closeBtn?.addEventListener('click', () => mobileMenu.classList.remove('active'));
+
+        // Navbar Scroll Effect
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
     </script>
 </body>
 

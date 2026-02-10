@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Our Vision | Digital Art NFT Platform</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -54,7 +54,7 @@
                 class="theme-toggle w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-white transition-all transform hover:rotate-12">
                 <i data-lucide="moon" class="w-5 h-5"></i>
             </button>
-            <a href="login.html" class="text-white font-medium hover:text-primary transition-colors">Login</a>
+            <a href="login.html" class="btn-premium btn-outline text-sm">Login</a>
             <a href="dashboard.html" class="btn-premium btn-primary text-sm">Connect Wallet</a>
         </div>
 
@@ -134,18 +134,18 @@
         <!-- 3. VISION & VALUES (Cards) -->
         <section class="py-24 px-6 lg:px-12 bg-dark/50 border-y border-white/5">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="p-10 glass-card rounded-[48px]">
+                <div class="p-10 glass-card rounded-[48px] flex flex-col items-center text-center">
                     <h3 class="text-2xl font-bold mb-6 text-primary">Decentralization</h3>
                     <p class="text-white/40 leading-relaxed font-medium">True ownership means no middlemen. We believe
                         in a sovereign future where artists control their destiny and collectors own their assets
                         on-chain.</p>
                 </div>
-                <div class="p-10 glass-card rounded-[48px]">
+                <div class="p-10 glass-card rounded-[48px] flex flex-col items-center text-center">
                     <h3 class="text-2xl font-bold mb-6 text-cyan">Excellence</h3>
                     <p class="text-white/40 leading-relaxed font-medium">We curate only the highest quality digital art.
                         Every pixel matters. Our platform is designed to showcase art in its most pristine form.</p>
                 </div>
-                <div class="p-10 glass-card rounded-[48px]">
+                <div class="p-10 glass-card rounded-[48px] flex flex-col items-center text-center">
                     <h3 class="text-2xl font-bold mb-6 text-pink">Innovation</h3>
                     <p class="text-white/40 leading-relaxed font-medium">From custom smart contracts to immersive VR
                         galleries, we are constantly pushing the boundaries of what a marketplace can be.</p>
@@ -308,10 +308,12 @@
             <h2 class="text-4xl font-['Outfit'] font-bold mb-16 px-4">Our <span class="text-cyan">Ecosystem</span></h2>
             <div
                 class="flex flex-wrap justify-center gap-16 grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-                <img src="https://img.icons8.com/ios-filled/100/ffffff/etherium.png" class="w-16 h-16" alt="Icon">
-                <img src="https://img.icons8.com/ios-filled/100/ffffff/bitcoin.png" class="w-16 h-16" alt="Icon">
-                <img src="https://img.icons8.com/ios-filled/100/ffffff/blockchain.png" class="w-16 h-16" alt="Icon">
-                <img src="https://img.icons8.com/ios-filled/100/ffffff/smart-contract.png" class="w-16 h-16" alt="Icon">
+                <img src="https://img.icons8.com/ios-filled/100/ffffff/ethereum.png" class="w-16 h-16" alt="Ethereum">
+                <img src="https://img.icons8.com/ios-filled/100/ffffff/bitcoin.png" class="w-16 h-16" alt="Bitcoin">
+                <img src="https://img.icons8.com/ios-filled/100/ffffff/blockchain.png" class="w-16 h-16"
+                    alt="Blockchain">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSr74hQnO3lK3Uq4yWf_Au-6WHD4PtMzk7gw&st"
+                    class="w-16 h-16 object-contain" alt="Smart Contract">
             </div>
         </section>
 
@@ -361,10 +363,10 @@
                             data-lucide="twitter"></i></a>
                     <a href="#"
                         class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-primary hover:border-primary hover:-translate-y-2 transition-all"><i
-                            data-lucide="instagram"></i></a>
+                            data-lucide="discord"></i></a>
                     <a href="#"
                         class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-pink hover:border-pink hover:-translate-y-2 transition-all"><i
-                            data-lucide="github"></i></a>
+                            data-lucide="instagram"></i></a>
                 </div>
             </div>
 
@@ -418,6 +420,16 @@
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn?.addEventListener('click', () => mobileMenu.classList.add('active'));
         closeBtn?.addEventListener('click', () => mobileMenu.classList.remove('active'));
+
+        // Navbar Scroll Effect
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
     </script>
 </body>
 

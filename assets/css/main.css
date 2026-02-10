@@ -21,10 +21,10 @@
     --dark-bg: #F3F4F6;
     --text-main: #111827;
     --text-muted: #4B5563;
-    --glass-bg: rgba(0, 0, 0, 0.05);
+    /* Cards and glass components stay dark for premium feel */
+    --card-bg: rgba(0, 0, 0, 0.8);
+    --glass-bg: rgba(0, 0, 0, 0.6);
     --glass-border: rgba(0, 0, 0, 0.1);
-    --card-bg: rgba(255, 255, 255, 0.8);
-    --nav-bg: rgba(243, 244, 246, 0.8);
 }
 
 body {
@@ -55,6 +55,8 @@ h4 {
     backdrop-filter: blur(8px);
     border: 1px solid var(--glass-border);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
 }
 
 .glass-card:hover {
@@ -86,6 +88,12 @@ nav {
         height: 64px;
         /* Mobile */
     }
+}
+
+nav.nav-scrolled {
+    background: rgba(11, 14, 20, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Guideline 5: Consistent Button Height */
@@ -178,6 +186,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    flex-grow: 1;
 }
 
 .cta-container {
@@ -207,27 +216,6 @@ nav {
 .light-mode {
     color: var(--text-main);
 }
-
-.light-mode .text-white/70 {
-    color: #FFFFFF !important;
-}
-
-.light-mode .text-white {
-    color: #FFFFFF !important;
-}
-
-.light-mode .text-white/90 {
-    color: #FFFFFF !important;
-}
-
-.light-mode .text-white/50 {
-    color: #FFFFFF !important;
-}
-
-.light-mode .text-white/30 {
-    color: #FFFFFF !important;
-}
-
-.light-mode .font-medium {
-    color: #374151 !important;
-}
+/* Select/Dropdown Compatibility */
+select { color: white !important; }
+select option { background-color: #0b0e14 !important; color: white !important; }
