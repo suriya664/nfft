@@ -59,24 +59,38 @@
             <a href="dashboard.html" class="btn-premium btn-primary text-sm">Connect Wallet</a>
         </div>
 
-        <button id="menu-toggle" class="lg:hidden text-white p-2">
-            <i data-lucide="menu" class="w-8 h-8"></i>
-        </button>
+        <!-- Mobile Actions -->
+        <div class="flex items-center gap-2 lg:hidden">
+            <button
+                class="theme-toggle w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-white transition-all transform hover:rotate-12">
+                <i data-lucide="moon" class="w-5 h-5"></i>
+            </button>
+            <button id="menu-toggle" class="text-white p-2">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
     </nav>
 
     <!-- MOBILE MENU (Left Slide) -->
     <div id="mobile-menu"
-        class="fixed inset-0 z-[60] bg-dark/95 backdrop-blur-xl lg:hidden flex flex-col p-8 w-[80%] max-w-[320px] h-screen border-r border-white/10">
+        class="fixed inset-0 z-[60] bg-dark/95 backdrop-blur-xl lg:hidden flex flex-col p-8 w-[80%] max-w-[320px] h-screen border-r border-white/10 overflow-y-auto">
         <div class="flex items-center justify-between mb-12">
             <span class="text-2xl font-['Outfit'] font-bold">ART<span class="text-primary">NFT</span></span>
-            <button id="menu-close" class="text-white"><i data-lucide="x" class="w-8 h-8"></i></button>
+            <div class="flex items-center gap-4">
+                <button
+                    class="theme-toggle w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-white transition-all transform hover:rotate-12">
+                    <i data-lucide="moon" class="w-5 h-5"></i>
+                </button>
+                <button id="menu-close" class="text-white"><i data-lucide="x" class="w-8 h-8"></i></button>
+            </div>
         </div>
-        <div class="flex flex-col gap-6 text-xl">
+        <div class="flex flex-col gap-2 text-xl">
             <a href="index.html">Home</a>
             <a href="explore.html">Explore</a>
             <a href="artists.html" class="text-cyan font-bold">Artists</a>
             <a href="collections.html">Collections</a>
             <a href="auctions.html">Drops</a>
+            <a href="about.html">About</a>
             <hr class="border-white/10 my-4">
             <a href="login.html" class="btn-premium btn-outline text-lg">Login</a>
             <a href="dashboard.html" class="btn-premium btn-primary text-lg">Connect Wallet</a>
@@ -84,7 +98,7 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    <main class="mt-[80px]">
+    <main class="mt-[80px] pb-24 lg:pb-0">
 
         <!-- 1. ARTISTS HERO -->
         <section class="relative py-28 px-6 text-center overflow-hidden">
@@ -118,12 +132,15 @@
         </section>
 
         <!-- 2. TOP ARTISTS (Leaderboard Expansion) -->
-        <section class="py-12 px-6 lg:px-12 border-y border-white/5 glass">
-            <div class="flex justify-between items-end mb-16">
-                <h2 class="text-5xl font-['Outfit'] font-bold">Global <span class="text-cyan">Leaderboard</span></h2>
+        <section class="py-12 px-6 sm:px-6 lg:px-12 border-y border-white/5 glass">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-6 text-center md:text-left">
+                <h2 class="text-4xl sm:text-5xl font-['Outfit'] font-extrabold tracking-tight">Global <span
+                        class="text-cyan">Leaderboard</span></h2>
                 <div class="flex gap-4">
-                    <button class="bg-primary text-white px-6 py-2 rounded-xl text-sm font-bold">Today</button>
-                    <button class="glass px-6 py-2 rounded-xl text-sm font-bold opacity-50 hover:opacity-100">All
+                    <button
+                        class="bg-primary text-white px-6 py-2 rounded-xl text-sm font-bold shadow-lg shadow-primary/20">Today</button>
+                    <button
+                        class="glass px-6 py-2 rounded-xl text-sm font-bold opacity-50 hover:opacity-100 transition-all">All
                         Time</button>
                 </div>
             </div>
@@ -197,8 +214,9 @@
 
         <!-- 3. VERIFIED ARTISTS (Compact Card - Guideline 44) -->
         <section class="py-24 px-6 lg:px-12 bg-dark">
-            <h2 class="text-4xl font-['Outfit'] font-bold mb-16">Verified <span
-                    class="text-primary">Professionals</span></h2>
+            <h2 class="text-4xl md:text-5xl font-['Outfit'] font-extrabold mb-16 text-center lg:text-left">Verified
+                <span class="text-primary">Professionals</span>
+            </h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-6">
                 <!-- Compact Card Implementation -->
                 <div
@@ -302,40 +320,44 @@
         </section>
 
         <!-- 4. ARTIST SPOTLIGHT (Large Bio) -->
-        <section class="py-24 px-6 lg:px-24">
-            <div class="glass-card rounded-[80px] p-12 lg:p-24 relative overflow-hidden">
-                <div class="flex flex-col xl:flex-row gap-20 items-center">
-                    <div class="xl:w-1/2 relative">
+        <section class="py-24 px-6 sm:px-6 lg:px-24">
+            <div class="glass-card rounded-[48px] sm:rounded-[80px] p-8 sm:p-12 lg:p-24 relative overflow-hidden">
+                <div class="flex flex-col xl:flex-row gap-16 items-center">
+                    <div class="w-full xl:w-1/2 relative flex justify-center">
                         <!-- Visual representation of artist's studio -->
                         <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1200&auto=format&fit=crop"
-                            class="rounded-[48px] shadow-2xl h-[500px] w-full object-cover" alt="Artist Studio">
+                            class="rounded-[40px] shadow-2xl h-[400px] lg:h-[500px] w-full object-cover"
+                            alt="Artist Studio">
                         <div
-                            class="absolute -bottom-10 -right-10 w-40 h-40 glass rounded-full flex items-center justify-center p-4">
+                            class="absolute -bottom-6 -right-6 lg:-bottom-10 lg:-right-10 w-32 h-32 lg:w-40 lg:h-40 glass rounded-full flex items-center justify-center p-3 lg:p-4 border border-white/10 shadow-2xl">
                             <img src="https://i.pravatar.cc/150?u=special" class="w-full h-full rounded-full"
                                 alt="Special">
                         </div>
                     </div>
-                    <div class="xl:w-1/2">
-                        <h2 class="text-5xl font-['Outfit'] font-extrabold mb-8">The <span
+                    <div class="w-full xl:w-1/2 text-center xl:text-left">
+                        <h2 class="text-4xl lg:text-5xl font-['Outfit'] font-extrabold mb-8 leading-tight">The <span
                                 class="text-gradient">Neo-Classical</span> Mastery</h2>
-                        <p class="text-xl text-white/60 mb-10 leading-relaxed italic">"My work is a dialogue between the
+                        <p
+                            class="text-lg lg:text-xl text-white/60 mb-10 leading-relaxed italic mx-auto xl:mx-0 max-w-lg">
+                            "My work is a dialogue between the
                             renaissance techniques and the volatility of the blockchain."</p>
                         <h4 class="text-2xl font-bold mb-4">- Julian Vantrose</h4>
-                        <div class="flex gap-8 mb-12">
-                            <div class="text-center">
+                        <div class="flex items-center justify-center xl:justify-start gap-8 mb-12">
+                            <div>
                                 <p class="text-3xl font-extrabold">2.1k</p>
                                 <p class="text-[10px] text-white/40 uppercase font-bold tracking-widest">Followers</p>
                             </div>
-                            <div class="text-center border-l border-white/10 pl-8">
+                            <div class="border-l border-white/10 pl-8">
                                 <p class="text-3xl font-extrabold">142</p>
                                 <p class="text-[10px] text-white/40 uppercase font-bold tracking-widest">Creations</p>
                             </div>
-                            <div class="text-center border-l border-white/10 pl-8">
+                            <div class="border-l border-white/10 pl-8">
                                 <p class="text-3xl font-extrabold">8.4 ETH</p>
                                 <p class="text-[10px] text-white/40 uppercase font-bold tracking-widest">Avg. Price</p>
                             </div>
                         </div>
-                        <button class="btn-premium btn-primary px-16 text-lg">Follow Artist</button>
+                        <button class="btn-premium btn-primary px-16 py-5 text-lg shadow-xl shadow-primary/20">Follow
+                            Artist</button>
                     </div>
                 </div>
             </div>
@@ -384,8 +406,8 @@
                 <p class="text-xl text-white/60 mb-12 max-w-2xl mx-auto">Upload your art, set up your royalty fees, and
                     sell to millions of collectors worldwide. Join the elite rank of Digital Art platform artists.</p>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="login.html" class="btn-premium btn-primary px-12 text-lg">Apply as Artist</a>
-                    <a href="contact.html" class="btn-premium btn-outline px-12 text-lg">View Artist FAQ</a>
+                    <a href="login.html" class="btn-premium btn-primary px-12 text-lg">Apply</a>
+                    <a href="contact.html" class="btn-premium btn-outline px-12 text-lg">FAQ</a>
                 </div>
             </div>
         </section>

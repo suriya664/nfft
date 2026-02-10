@@ -59,24 +59,38 @@
             <a href="dashboard.html" class="btn-premium btn-primary text-sm">Connect Wallet</a>
         </div>
 
-        <button id="menu-toggle" class="lg:hidden text-white p-2">
-            <i data-lucide="menu" class="w-8 h-8"></i>
-        </button>
+        <!-- Mobile Actions -->
+        <div class="flex items-center gap-2 lg:hidden">
+            <button
+                class="theme-toggle w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-white transition-all transform hover:rotate-12">
+                <i data-lucide="moon" class="w-5 h-5"></i>
+            </button>
+            <button id="menu-toggle" class="text-white p-2">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
     </nav>
 
     <!-- MOBILE MENU (Left Slide) -->
     <div id="mobile-menu"
-        class="fixed inset-0 z-[60] bg-dark/95 backdrop-blur-xl lg:hidden flex flex-col p-8 w-[80%] max-w-[320px] h-screen border-r border-white/10">
+        class="fixed inset-0 z-[60] bg-dark/95 backdrop-blur-xl lg:hidden flex flex-col p-8 w-[80%] max-w-[320px] h-screen border-r border-white/10 overflow-y-auto">
         <div class="flex items-center justify-between mb-12">
             <span class="text-2xl font-['Outfit'] font-bold">ART<span class="text-primary">NFT</span></span>
-            <button id="menu-close" class="text-white"><i data-lucide="x" class="w-8 h-8"></i></button>
+            <div class="flex items-center gap-4">
+                <button
+                    class="theme-toggle w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-white transition-all transform hover:rotate-12">
+                    <i data-lucide="moon" class="w-5 h-5"></i>
+                </button>
+                <button id="menu-close" class="text-white"><i data-lucide="x" class="w-8 h-8"></i></button>
+            </div>
         </div>
-        <div class="flex flex-col gap-6 text-xl">
+        <div class="flex flex-col gap-2 text-xl">
             <a href="index.html">Home</a>
             <a href="explore.html">Explore</a>
             <a href="artists.html">Artists</a>
             <a href="collections.html" class="text-white hover:text-cyan font-bold">Collections</a>
             <a href="auctions.html">Drops</a>
+            <a href="about.html">About</a>
             <hr class="border-white/10 my-4">
             <a href="login.html" class="btn-premium btn-outline text-lg">Login</a>
             <a href="dashboard.html" class="btn-premium btn-primary text-lg">Connect Wallet</a>
@@ -84,7 +98,7 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    <main class="mt-[80px]">
+    <main class="mt-[80px] pb-24 lg:pb-0">
 
         <!-- 1. COLLECTIONS HERO -->
         <section class="relative py-20 px-6 text-center bg-gradient-to-b from-cyan/10 to-transparent">
@@ -97,7 +111,7 @@
                 <h1 class="text-6xl md:text-8xl font-['Outfit'] font-extrabold mb-8 tracking-tighter">
                     Premium <span class="text-gradient">Collections</span>
                 </h1>
-                <p class="text-xl text-white/50 max-w-2xl mx-auto leading-relaxed">Discover curated sets of
+                <p class="text-xl text-white/50 max-w-2xl mx-auto leading-relaxed font-medium">Discover curated sets of
                     high-fidelity digital assets. Each collection is a unique world built by master artists.</p>
             </div>
         </section>
@@ -289,7 +303,8 @@
 
         <!-- 4. COLLECTION CATEGORIES (Interactive pills) -->
         <section class="py-12 px-6 lg:px-12 relative text-center">
-            <h2 class="text-4xl font-['Outfit'] font-bold mb-12">Search by <span class="text-primary">Interest</span>
+            <h2 class="text-4xl md:text-5xl font-['Outfit'] font-extrabold mb-12">Search by <span
+                    class="text-primary">Interest</span>
             </h2>
             <div class="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
                 <button
@@ -318,46 +333,48 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <!-- Detailed Card 1 -->
                 <div
-                    class="glass-card p-10 rounded-[48px] flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-primary/30 transition-all">
+                    class="glass-card p-8 md:p-10 rounded-[40px] md:rounded-[48px] flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-primary/30 transition-all text-center md:text-left">
                     <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=400"
-                        class="w-full md:w-1/3 aspect-square object-cover rounded-[32px]" alt="PC">
+                        class="w-full md:w-1/3 aspect-square object-cover rounded-[32px] shadow-2xl" alt="PC">
                     <div class="flex-1">
                         <h4 class="text-3xl font-extrabold mb-2">Liquid Reality</h4>
-                        <p class="text-white/40 mb-6 line-clamp-2">Exploring the boundaries of fluid dynamics and
+                        <p class="text-white/40 mb-6 line-clamp-2 max-w-md mx-auto md:mx-0">Exploring the boundaries of
+                            fluid dynamics and
                             virtual perception. A collection of 150 unique pieces.</p>
-                        <div class="flex gap-6 mb-8">
+                        <div class="flex justify-center md:justify-start gap-8 mb-8">
                             <div>
                                 <p class="text-xs text-white/40 font-bold uppercase mb-1">Floor</p>
                                 <p class="text-2xl font-bold">1.2 ETH</p>
                             </div>
-                            <div class="border-l border-white/10 pl-6">
+                            <div class="border-l border-white/10 pl-8">
                                 <p class="text-xs text-white/40 font-bold uppercase mb-1">Owners</p>
                                 <p class="text-2xl font-bold">842</p>
                             </div>
                         </div>
-                        <button class="w-full btn-premium btn-primary">Check Details</button>
+                        <button class="w-full btn-premium btn-primary py-4">Check Details</button>
                     </div>
                 </div>
                 <!-- Detailed Card 2 -->
                 <div
-                    class="glass-card p-10 rounded-[48px] flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-cyan/30 transition-all">
+                    class="glass-card p-8 md:p-10 rounded-[40px] md:rounded-[48px] flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-cyan/30 transition-all text-center md:text-left">
                     <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=400"
-                        class="w-full md:w-1/3 aspect-square object-cover rounded-[32px]" alt="PC">
+                        class="w-full md:w-1/3 aspect-square object-cover rounded-[32px] shadow-2xl" alt="PC">
                     <div class="flex-1">
                         <h4 class="text-3xl font-extrabold mb-2">Neon Knights</h4>
-                        <p class="text-white/40 mb-6 line-clamp-2">Sovereign defenders of the digital frontier.
+                        <p class="text-white/40 mb-6 line-clamp-2 max-w-md mx-auto md:mx-0">Sovereign defenders of the
+                            digital frontier.
                             Hand-drawn characters with procedural armor.</p>
-                        <div class="flex gap-6 mb-8">
+                        <div class="flex justify-center md:justify-start gap-8 mb-8">
                             <div>
                                 <p class="text-xs text-white/40 font-bold uppercase mb-1">Floor</p>
                                 <p class="text-2xl font-bold">0.85 ETH</p>
                             </div>
-                            <div class="border-l border-white/10 pl-6">
+                            <div class="border-l border-white/10 pl-8">
                                 <p class="text-xs text-white/40 font-bold uppercase mb-1">Owners</p>
                                 <p class="text-2xl font-bold">1.2k</p>
                             </div>
                         </div>
-                        <button class="w-full btn-premium btn-primary">Check Details</button>
+                        <button class="w-full btn-premium btn-primary py-4">Check Details</button>
                     </div>
                 </div>
             </div>
@@ -365,60 +382,66 @@
 
         <!-- 6. TOP COLLECTIONS LEADERBOARD -->
         <section class="py-24 px-6 lg:px-24">
-            <h2 class="text-4xl font-['Outfit'] font-bold mb-16 text-center">Top <span class="text-cyan">Volume</span>
+            <h2 class="text-4xl md:text-5xl font-['Outfit'] font-extrabold mb-16 text-center">Top <span
+                    class="text-cyan">Volume</span>
                 Stats</h2>
-            <div class="glass rounded-[40px] overflow-hidden border border-white/10">
-                <table class="w-full text-left">
-                    <thead class="bg-white/5 border-b border-white/10">
-                        <tr>
-                            <th class="p-8 font-bold text-white/40 uppercase tracking-widest text-xs">Collection</th>
-                            <th class="p-8 font-bold text-white/40 uppercase tracking-widest text-xs">Volume</th>
-                            <th class="p-8 font-bold text-white/40 uppercase tracking-widest text-xs">24h%</th>
-                            <th class="p-8 font-bold text-white/40 uppercase tracking-widest text-xs">Floor Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors cursor-pointer">
-                            <td class="p-8 flex items-center gap-4">
-                                <span class="font-bold text-white/20">1</span>
-                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=100"
-                                    class="w-12 h-12 rounded-xl" alt="L">
-                                <span class="font-bold">Space Drifters</span>
-                            </td>
-                            <td class="p-8 font-bold">12,450 ETH</td>
-                            <td class="p-8 text-green-400 font-bold">+12.5%</td>
-                            <td class="p-8 font-bold">4.2 ETH</td>
-                        </tr>
-                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors cursor-pointer">
-                            <td class="p-8 flex items-center gap-4">
-                                <span class="font-bold text-white/20">2</span>
-                                <img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80&w=100"
-                                    class="w-12 h-12 rounded-xl" alt="L">
-                                <span class="font-bold">Prism Shards</span>
-                            </td>
-                            <td class="p-8 font-bold">8,920 ETH</td>
-                            <td class="p-8 text-red-400 font-bold">-2.4%</td>
-                            <td class="p-8 font-bold">1.8 ETH</td>
-                        </tr>
-                        <tr class="hover:bg-white/5 transition-colors cursor-pointer">
-                            <td class="p-8 flex items-center gap-4">
-                                <span class="font-bold text-white/20">3</span>
-                                <img src="https://images.unsplash.com/photo-1635322966219-b75ed372eb3c?q=80&w=100&auto=format&fit=crop"
-                                    class="w-12 h-12 rounded-xl" alt="L">
-                                <span class="font-bold">Cyber Samurai</span>
-                            </td>
-                            <td class="p-8 font-bold">7,140 ETH</td>
-                            <td class="p-8 text-green-400 font-bold">+5.8%</td>
-                            <td class="p-8 font-bold">2.9 ETH</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="glass rounded-[32px] sm:rounded-[40px] overflow-x-auto border border-white/10 no-scrollbar">
+                <div class="min-w-full sm:min-w-[800px]">
+                    <table class="w-full text-left">
+                        <thead class="bg-white/5 border-b border-white/10">
+                            <tr>
+                                <th class="p-8 font-bold text-white/40 uppercase tracking-widest text-xs">Collection
+                                </th>
+                                <th class="p-8 font-bold text-white/40 uppercase tracking-widest text-xs">Volume</th>
+                                <th class="p-8 font-bold text-white/40 uppercase tracking-widest text-xs">24h%</th>
+                                <th class="p-8 font-bold text-white/40 uppercase tracking-widest text-xs">Floor Price
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-white/5 hover:bg-white/5 transition-colors cursor-pointer">
+                                <td class="p-8 flex items-center gap-4">
+                                    <span class="font-bold text-white/20">1</span>
+                                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=100"
+                                        class="w-12 h-12 rounded-xl" alt="L">
+                                    <span class="font-bold">Space Drifters</span>
+                                </td>
+                                <td class="p-8 font-bold">12,450 ETH</td>
+                                <td class="p-8 text-green-400 font-bold">+12.5%</td>
+                                <td class="p-8 font-bold">4.2 ETH</td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5 transition-colors cursor-pointer">
+                                <td class="p-8 flex items-center gap-4">
+                                    <span class="font-bold text-white/20">2</span>
+                                    <img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80&w=100"
+                                        class="w-12 h-12 rounded-xl" alt="L">
+                                    <span class="font-bold">Prism Shards</span>
+                                </td>
+                                <td class="p-8 font-bold">8,920 ETH</td>
+                                <td class="p-8 text-red-400 font-bold">-2.4%</td>
+                                <td class="p-8 font-bold">1.8 ETH</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors cursor-pointer">
+                                <td class="p-8 flex items-center gap-4">
+                                    <span class="font-bold text-white/20">3</span>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmj_OuHqsTjyZ-WREiqGbfAYT0Ez3IG37NYw&s"
+                                        class="w-12 h-12 rounded-xl" alt="L">
+                                    <span class="font-bold">Cyber Samurai</span>
+                                </td>
+                                <td class="p-8 font-bold">7,140 ETH</td>
+                                <td class="p-8 text-green-400 font-bold">+5.8%</td>
+                                <td class="p-8 font-bold">2.9 ETH</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
         <!-- 2. SEARCH & TABS -->
-        <section class="py-8 px-6 lg:px-12 glass border-y border-white/10 sticky top-[80px] z-40">
-            <h2 class="text-4xl font-['Outfit'] font-bold mb-16 px-4">Latest <span class="text-pink">Mints</span></h2>
+        <section class="py-8 px-6 lg:px-12 glass border-y border-white/10 relative z-10">
+            <h2 class="text-4xl md:text-5xl font-['Outfit'] font-extrabold mb-16 text-center">Latest <span
+                    class="text-pink">Mints</span></h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
                 <img src="https://mindmatters.ai/wp-content/uploads/sites/2/2021/08/non-fungible-token-hologram-on-virtual-digital-screen-nft-with-network-circuit-and-globe-dark-background-concept-of-cryptoart-and-technology-stockpack-adobe-stock-scaled.jpg"
                     class="aspect-square object-cover rounded-2xl hover:scale-110 transition-all border border-white/5"
@@ -453,9 +476,10 @@
                     <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=2000"
                         class="w-full h-full object-cover" alt="X">
                 </div>
-                <div class="relative z-10">
-                    <h2 class="text-6xl font-['Outfit'] font-extrabold mb-8 leading-tight">Bring Your World <br> <span
-                            class="text-white">To Life</span></h2>
+                <div class="relative z-10 px-4">
+                    <h2 class="text-4xl sm:text-6xl font-['Outfit'] font-extrabold mb-8 leading-tight">Bring Your World
+                        <br> <span class="text-white">To Life</span>
+                    </h2>
                     <p class="text-2xl text-white/70 mb-12 max-w-2xl mx-auto">Launch your official NFT collection with
                         dedicated support, custom branding, and early access to drops.</p>
                     <button class="btn-premium btn-primary px-16 text-xl shadow-[0_0_50px_rgba(139,92,246,0.5)]">Start

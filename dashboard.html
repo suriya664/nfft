@@ -29,15 +29,16 @@
 
     <div class="flex min-h-screen bg-dark">
         <!-- SIDEBAR -->
-        <aside class="w-64 lg:w-72 glass border-r border-white/10 hidden lg:flex flex-col fixed inset-y-0 z-50">
-            <div class="p-8">
-                <a href="index.html" class="flex items-center gap-2 group mb-12">
+        <aside
+            class="w-64 lg:w-72 glass border-r border-white/10 hidden lg:flex flex-col fixed inset-y-0 z-50 overflow-y-auto custom-scrollbar">
+            <div class="p-6">
+                <a href="index.html" class="flex items-center gap-2 group mb-8">
                     <div
-                        class="w-10 h-10 bg-gradient-to-br from-cyan to-primary rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                        <i data-lucide="zap" class="text-white w-6 h-6"></i>
+                        class="w-8 h-8 bg-gradient-to-br from-cyan to-primary rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="text-white w-5 h-5"></i>
                     </div>
                     <span
-                        class="text-2xl font-['Outfit'] font-extrabold tracking-tight group-hover:text-cyan transition-colors">ART<span
+                        class="text-xl font-['Outfit'] font-extrabold tracking-tight group-hover:text-cyan transition-colors">ART<span
                             class="text-primary">NFT</span></span>
                 </a>
 
@@ -65,21 +66,22 @@
                 </nav>
             </div>
 
-            <div class="mt-auto p-8 border-t border-white/5">
+            <div class="mt-auto p-6 border-t border-white/5">
                 <button
-                    class="theme-toggle w-full flex items-center gap-4 p-4 rounded-2xl text-white/60 hover:text-white hover:bg-white/5 transition-all mb-4">
-                    <i data-lucide="moon" class="w-5 h-5"></i> Switch Theme
+                    class="theme-toggle w-full flex items-center gap-3 p-3 rounded-xl text-white/60 hover:text-white hover:bg-white/5 transition-all mb-4">
+                    <i data-lucide="moon" class="w-5 h-5"></i>
+                    <span class="text-sm">Switch Theme</span>
                 </button>
-                <div class="flex items-center gap-4 p-4 mb-6">
-                    <img src="https://i.pravatar.cc/100?u=user" class="w-10 h-10 rounded-full border-2 border-primary"
-                        alt="U">
+                <div class="flex items-center gap-3 p-3 mb-4 bg-white/5 rounded-2xl border border-white/5">
+                    <img src="https://i.pravatar.cc/100?u=user"
+                        class="w-10 h-10 rounded-full border-2 border-primary/50" alt="U">
                     <div class="overflow-hidden">
-                        <p class="text-sm font-bold truncate">Alex Riverside</p>
+                        <p class="text-sm font-bold truncate text-white">Alex Riverside</p>
                         <p class="text-[10px] text-white/40 truncate">0x84...2e4d</p>
                     </div>
                 </div>
                 <a href="login.html"
-                    class="flex items-center gap-4 p-4 rounded-2xl text-red-400 hover:bg-red-500/10 transition-all font-bold">
+                    class="flex items-center gap-3 p-3 rounded-xl text-red-400 hover:bg-red-500/10 transition-all font-bold text-sm">
                     <i data-lucide="log-out" class="w-5 h-5"></i> Logout
                 </a>
             </div>
@@ -97,9 +99,57 @@
                     </div>
                     <span class="text-xl font-['Outfit'] font-bold">ART<span class="text-primary">NFT</span></span>
                 </a>
-                <button class="theme-toggle w-10 h-10 rounded-xl glass flex items-center justify-center text-white">
-                    <i data-lucide="moon" class="w-5 h-5"></i>
-                </button>
+                <div class="flex items-center gap-2">
+                    <button class="theme-toggle w-10 h-10 rounded-xl glass flex items-center justify-center text-white">
+                        <i data-lucide="moon" class="w-5 h-5"></i>
+                    </button>
+                    <button id="dashboard-menu-toggle"
+                        class="w-10 h-10 rounded-xl glass flex items-center justify-center text-white">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- DASHBOARD MOBILE MENU (Backdrop + Drawer) -->
+            <div id="dashboard-mobile-menu"
+                class="fixed inset-0 z-[60] bg-dark/80 backdrop-blur-sm lg:hidden opacity-0 pointer-events-none transition-opacity duration-300">
+                <div id="dashboard-drawer"
+                    class="fixed inset-y-0 left-0 w-[280px] bg-dark border-r border-white/10 p-8 flex flex-col transform -translate-x-full transition-transform duration-300 ease-out overflow-y-auto custom-scrollbar">
+                    <div class="flex items-center justify-between mb-8">
+                        <span class="text-2xl font-['Outfit'] font-bold">DASH<span
+                                class="text-primary">BOARD</span></span>
+                        <button id="dashboard-menu-close" class="text-white hover:text-primary transition-colors">
+                            <i data-lucide="x" class="w-8 h-8"></i>
+                        </button>
+                    </div>
+                    <nav class="flex flex-col gap-1 text-lg">
+                        <a href="dashboard.html"
+                            class="flex items-center gap-4 p-4 rounded-2xl bg-primary text-white font-bold">
+                            <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Overview
+                        </a>
+                        <a href="explore.html"
+                            class="flex items-center gap-4 p-4 rounded-2xl text-white/60 hover:text-white hover:bg-white/5 transition-all">
+                            <i data-lucide="compass" class="w-5 h-5"></i> Marketplace
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-4 p-4 rounded-2xl text-white/60 hover:text-white hover:bg-white/5 transition-all">
+                            <i data-lucide="heart" class="w-5 h-5"></i> My Bids
+                        </a>
+                        <a href="collections.html"
+                            class="flex items-center gap-4 p-4 rounded-2xl text-white/60 hover:text-white hover:bg-white/5 transition-all">
+                            <i data-lucide="layers" class="w-5 h-5"></i> Collections
+                        </a>
+                        <a href="about.html"
+                            class="flex items-center gap-4 p-4 rounded-2xl text-white/60 hover:text-white hover:bg-white/5 transition-all">
+                            <i data-lucide="info" class="w-5 h-5"></i> About
+                        </a>
+                        <hr class="border-white/10 my-4">
+                        <a href="login.html"
+                            class="flex items-center gap-4 p-4 rounded-2xl text-red-400 hover:bg-red-500/10 transition-all font-bold">
+                            <i data-lucide="log-out" class="w-5 h-5"></i> Logout
+                        </a>
+                    </nav>
+                </div>
             </div>
 
             <!-- MAIN DASHBOARD CONTENT -->
@@ -131,7 +181,7 @@
                             <i data-lucide="zap" class="w-4 h-4"></i> 3 ends within 2 hours
                         </div>
                     </div>
-                    <div class="glass-card p-10 rounded-[48px]">
+                    <div class="glass-card p-6 rounded-[32px]">
                         <p class="text-[10px] text-white/40 uppercase font-black tracking-widest mb-4">Collector Score
                         </p>
                         <h2 class="text-4xl font-black mb-6">9,420</h2>
@@ -144,8 +194,9 @@
                 <!-- 2. DATA VISUALIZATION (Guideline 47: Reduced size bar graphs) -->
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
                     <!-- Growth Chart (Bar Graph) -->
-                    <div class="lg:col-span-2 glass-card p-10 rounded-[48px]">
-                        <div class="flex justify-between items-center mb-12">
+                    <div class="lg:col-span-2 glass-card p-6 md:p-10 rounded-[32px] md:rounded-[48px]">
+                        <div
+                            class="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-6 text-center md:text-left">
                             <h3 class="text-2xl font-bold">Value Growth</h3>
                             <select
                                 class="bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-sm focus:outline-none">
@@ -201,8 +252,8 @@
                     </div>
 
                     <!-- Bid activity -->
-                    <div class="glass-card p-10 rounded-[48px]">
-                        <h3 class="text-2xl font-bold mb-8">Recent Bids</h3>
+                    <div class="glass-card p-6 md:p-10 rounded-[32px] md:rounded-[48px]">
+                        <h3 class="text-2xl font-bold mb-8 text-center md:text-left">Recent Bids</h3>
                         <div class="space-y-6">
                             <div
                                 class="flex items-center gap-4 bg-white/5 p-4 rounded-3xl border border-white/5 hover:border-white/10 transition-all cursor-pointer">
@@ -217,7 +268,7 @@
                             </div>
                             <div
                                 class="flex items-center gap-4 bg-white/5 p-4 rounded-3xl border border-white/5 hover:border-white/10 transition-all cursor-pointer">
-                                <img src="https://images.unsplash.com/photo-1643101808620-e4b85590987c?q=80&w=100"
+                                <img src="https://motionarray.imgix.net/preview-826513-x4cuZ1W12h-high_0015.jpg?w=660&q=60&fit=max&auto=format"
                                     class="w-12 h-12 rounded-xl object-cover" alt="X">
                                 <div class="flex-1">
                                     <p class="text-sm font-bold">Cyber Glitch</p>
@@ -245,7 +296,8 @@
 
                 <!-- 3. OWNED NFTS GALLERY (Filter icon for mobile - Guideline 19) -->
                 <div class="mb-12">
-                    <div class="flex justify-between items-center mb-10">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-center md:items-end mb-10 gap-6 text-center md:text-left">
                         <h2 class="text-3xl font-['Outfit'] font-extrabold px-2">Owned <span
                                 class="text-gradient">Collection</span></h2>
                         <div class="flex items-center gap-4">
@@ -291,7 +343,7 @@
                         <!-- Item 3 -->
                         <div
                             class="glass card-compact group cursor-pointer border border-white/5 hover:border-cyan/40 transition-all rounded-[32px] overflow-hidden p-3 bg-white/5">
-                            <img src="https://images.unsplash.com/photo-1547891269-0512a14596d3?q=80&w=400"
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnUnImiQQhOSmV-wTd_bK6A2KPJeZ8VA4ykA&s"
                                 class="w-full aspect-square object-cover rounded-[24px] mb-4 group-hover:scale-105 transition-all"
                                 alt="N">
                             <div class="px-2 pb-2">
@@ -322,7 +374,7 @@
                         </div>
                         <div
                             class="glass card-compact group cursor-pointer border border-white/5 hover:border-cyan/40 transition-all rounded-[32px] overflow-hidden p-3 bg-white/5">
-                            <img src="https://images.unsplash.com/photo-1634976779374-1e0723cc580d?q=80&w=400"
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAxkGplZDs4VHPeOVQHoanjqmM2ElWYnOJmA&s"
                                 class="w-full aspect-square object-cover rounded-[24px] mb-4 group-hover:scale-105 transition-all"
                                 alt="N">
                             <div class="px-2 pb-2">
@@ -334,8 +386,9 @@
                 </div>
 
                 <!-- 4. TRANSACTION HISTORY -->
-                <div class="glass-card rounded-[48px] overflow-hidden mb-12 border border-white/10">
-                    <div class="p-8 lg:px-12 border-b border-white/10 flex justify-between items-center bg-white/5">
+                <div class="glass-card rounded-[32px] md:rounded-[48px] overflow-hidden mb-12 border border-white/10">
+                    <div
+                        class="p-8 lg:px-12 border-b border-white/10 flex flex-col md:flex-row justify-between items-center md:items-end bg-white/5 gap-6 text-center md:text-left">
                         <h3 class="text-2xl font-bold">Transaction History</h3>
                         <button
                             class="text-xs font-bold text-primary uppercase tracking-widest hover:text-white transition-all">Export
@@ -345,47 +398,47 @@
                         <table class="w-full text-left">
                             <thead class="bg-white/5 border-b border-white/5">
                                 <tr class="text-[10px] text-white/20 uppercase tracking-[0.2em] font-black">
-                                    <th class="p-10">Event</th>
-                                    <th class="p-10">Item</th>
-                                    <th class="p-10">Price</th>
-                                    <th class="p-10">From</th>
-                                    <th class="p-10">To</th>
-                                    <th class="p-10">Date</th>
+                                    <th class="p-4 md:p-10">Event</th>
+                                    <th class="p-4 md:p-10">Item</th>
+                                    <th class="p-4 md:p-10">Price</th>
+                                    <th class="p-4 md:p-10">From</th>
+                                    <th class="p-4 md:p-10">To</th>
+                                    <th class="p-4 md:p-10">Date</th>
                                 </tr>
                             </thead>
                             <tbody id="transaction-body">
                                 <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                    <td class="p-10 flex items-center gap-3">
+                                    <td class="p-4 md:p-10 flex items-center gap-3">
                                         <i data-lucide="shopping-cart" class="text-cyan w-4 h-4"></i>
                                         <span class="font-bold">Sale</span>
                                     </td>
-                                    <td class="p-10 font-bold">#42nd Street</td>
-                                    <td class="p-10 font-mono text-cyan">4.50 ETH</td>
-                                    <td class="p-10 text-white/40 text-xs">0x42...88a1</td>
-                                    <td class="p-10 text-white/40 text-xs text-primary">You</td>
-                                    <td class="p-10 text-white/40 text-xs">2 hours ago</td>
+                                    <td class="p-4 md:p-10 font-bold">#42nd Street</td>
+                                    <td class="p-4 md:p-10 font-mono text-cyan">4.50 ETH</td>
+                                    <td class="p-4 md:p-10 text-white/40 text-xs">0x42...88a1</td>
+                                    <td class="p-4 md:p-10 text-white/40 text-xs text-primary">You</td>
+                                    <td class="p-4 md:p-10 text-white/40 text-xs">2 hours ago</td>
                                 </tr>
                                 <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                    <td class="p-10 flex items-center gap-3">
+                                    <td class="p-4 md:p-10 flex items-center gap-3">
                                         <i data-lucide="arrow-up-right" class="text-primary w-4 h-4"></i>
                                         <span class="font-bold">Bid</span>
                                     </td>
-                                    <td class="p-10 font-bold">Nexus Core</td>
-                                    <td class="p-10 font-mono text-primary">1.25 ETH</td>
-                                    <td class="p-10 text-white/40 text-xs text-primary">You</td>
-                                    <td class="p-10 text-white/40 text-xs">0xe4...112c</td>
-                                    <td class="p-10 text-white/40 text-xs">1 day ago</td>
+                                    <td class="p-4 md:p-10 font-bold">Nexus Core</td>
+                                    <td class="p-4 md:p-10 font-mono text-primary">1.25 ETH</td>
+                                    <td class="p-4 md:p-10 text-white/40 text-xs text-primary">You</td>
+                                    <td class="p-4 md:p-10 text-white/40 text-xs">0xe4...112c</td>
+                                    <td class="p-4 md:p-10 text-white/40 text-xs">1 day ago</td>
                                 </tr>
                                 <tr class="hover:bg-white/5 transition-colors">
-                                    <td class="p-10 flex items-center gap-3">
+                                    <td class="p-4 md:p-10 flex items-center gap-3">
                                         <i data-lucide="zap" class="text-pink w-4 h-4"></i>
                                         <span class="font-bold">Mint</span>
                                     </td>
-                                    <td class="p-10 font-bold">Genesis #01</td>
-                                    <td class="p-10 font-mono text-pink">0.05 ETH</td>
-                                    <td class="p-10 text-white/40 text-xs">Null Address</td>
-                                    <td class="p-10 text-white/40 text-xs text-primary">You</td>
-                                    <td class="p-10 text-white/40 text-xs">5 days ago</td>
+                                    <td class="p-4 md:p-10 font-bold">Genesis #01</td>
+                                    <td class="p-4 md:p-10 font-mono text-pink">0.05 ETH</td>
+                                    <td class="p-4 md:p-10 text-white/40 text-xs">Null Address</td>
+                                    <td class="p-4 md:p-10 text-white/40 text-xs text-primary">You</td>
+                                    <td class="p-4 md:p-10 text-white/40 text-xs">5 days ago</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -410,6 +463,34 @@
 
     <script>
         lucide.createIcons();
+
+        // Dashboard Mobile Menu Toggle
+        const dashMenuBtn = document.getElementById('dashboard-menu-toggle');
+        const dashMenuClose = document.getElementById('dashboard-menu-close');
+        const dashMobileMenu = document.getElementById('dashboard-mobile-menu');
+        const dashDrawer = document.getElementById('dashboard-drawer');
+
+        const openMenu = () => {
+            dashMobileMenu.style.opacity = '1';
+            dashMobileMenu.style.pointerEvents = 'auto';
+            dashDrawer.style.transform = 'translateX(0)';
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeMenu = () => {
+            dashMobileMenu.style.opacity = '0';
+            dashMobileMenu.style.pointerEvents = 'none';
+            dashDrawer.style.transform = 'translateX(-100%)';
+            document.body.style.overflow = '';
+        };
+
+        dashMenuBtn?.addEventListener('click', openMenu);
+        dashMenuClose?.addEventListener('click', closeMenu);
+        dashMobileMenu?.addEventListener('click', (e) => {
+            if (e.target === dashMobileMenu) closeMenu();
+        });
+
+        // Theme Toggle Persistence
     </script>
 </body>
 
