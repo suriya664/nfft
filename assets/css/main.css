@@ -185,3 +185,49 @@ nav {
     width: 100%;
     text-align: center;
 }
+
+/* Theme Toggle Button Styles */
+.theme-toggle {
+    transition: all 0.3s ease;
+}
+
+.light-mode .theme-toggle {
+    color: #374151;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .theme-toggle:hover {
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.1);
+    border-color: #8B5CF6;
+}
+
+/* Ensure text visibility in both themes */
+.light-mode {
+    color: var(--text-main);
+}
+
+.light-mode .text-white/70 {
+    color: #FFFFFF !important;
+}
+
+.light-mode .text-white {
+    color: #FFFFFF !important;
+}
+
+.light-mode .text-white/90 {
+    color: #FFFFFF !important;
+}
+
+.light-mode .text-white/50 {
+    color: #FFFFFF !important;
+}
+
+.light-mode .text-white/30 {
+    color: #FFFFFF !important;
+}
+
+.light-mode .font-medium {
+    color: #374151 !important;
+}

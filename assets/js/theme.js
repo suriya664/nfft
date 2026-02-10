@@ -9,6 +9,8 @@ const themeToggle = {
         const savedTheme = localStorage.getItem('artnft-theme') || 'dark';
         if (savedTheme === 'light') {
             document.documentElement.classList.add('light-mode');
+        } else {
+            document.documentElement.classList.remove('light-mode');
         }
         this.updateIcons(savedTheme);
 
@@ -50,5 +52,7 @@ document.addEventListener('DOMContentLoaded', () => themeToggle.init());
     const savedTheme = localStorage.getItem('artnft-theme') || 'dark';
     if (savedTheme === 'light') {
         document.documentElement.classList.add('light-mode');
+    } else {
+        document.documentElement.classList.remove('light-mode');
     }
 })();
