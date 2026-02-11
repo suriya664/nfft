@@ -55,7 +55,7 @@
 
         <!-- Desktop Links (Guideline 29 - 1px spacing) -->
         <div class="hidden lg:flex items-center gap-8 ml-8">
-            <a href="index.html" class="text-cyan font-semibold border-b-2 border-cyan pb-1 transition-all">Home</a>
+            <a href="index.html" class="text-cyan font-semibold border-b-2 border-cyan pb-1 transition-all active">Home</a>
             <a href="explore.html" class="text-white/70 hover:text-white transition-all">Explore</a>
             <a href="artists.html" class="text-white/70 hover:text-white transition-all">Artists</a>
             <a href="collections.html" class="text-white/70 hover:text-white transition-all">Collections</a>
@@ -86,7 +86,7 @@
 
     <!-- MOBILE MENU (Left Slide) -->
     <div id="mobile-menu"
-        class="fixed inset-0 z-[60] bg-dark/95 backdrop-blur-xl lg:hidden flex flex-col p-8 w-[80%] max-w-[320px] h-screen border-r border-white/10 overflow-y-auto">
+        class="fixed inset-0 z-[60] bg-dark/95 backdrop-blur-xl lg:hidden flex flex-col p-8 w-[80%] max-w-[320px] h-screen border-r border-white/10 overflow-hidden">
         <div class="flex items-center justify-between mb-12">
             <span class="text-2xl font-['Outfit'] font-bold">ART<span class="text-primary">NFT</span></span>
             <div class="flex items-center gap-4">
@@ -97,13 +97,13 @@
                 <button id="menu-close" class="text-white"><i data-lucide="x" class="w-8 h-8"></i></button>
             </div>
         </div>
-        <div class="flex flex-col gap-2 text-xl">
-            <a href="index.html">Home</a>
-            <a href="explore.html">Explore</a>
-            <a href="artists.html">Artists</a>
-            <a href="collections.html">Collections</a>
-            <a href="auctions.html">Drops</a>
-            <a href="about.html">About</a>
+        <div class="flex flex-col gap-2 text-xl overflow-y-auto">
+            <a href="index.html" class="text-cyan font-semibold border-b-2 border-cyan pb-1 transition-all">Home</a>
+            <a href="explore.html" class="text-white/70 hover:text-white transition-all">Explore</a>
+            <a href="artists.html" class="text-white/70 hover:text-white transition-all">Artists</a>
+            <a href="collections.html" class="text-white/70 hover:text-white transition-all">Collections</a>
+            <a href="auctions.html" class="text-white/70 hover:text-white transition-all">Drops</a>
+            <a href="about.html" class="text-white/70 hover:text-white transition-all">About</a>
             <hr class="border-white/10 my-4">
             <a href="login.html" class="btn-premium btn-outline text-lg">Login</a>
             <a href="dashboard.html" class="btn-premium btn-primary text-lg">Connect Wallet</a>
@@ -308,10 +308,10 @@
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         alt="Coll 1">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
-                    <div class="absolute bottom-10 left-10">
-                        <p class="text-cyan font-bold uppercase tracking-widest text-xs mb-2">Sci-Fi Series</p>
-                        <h3 class="text-4xl font-extrabold mb-4">Galactic Voyage</h3>
-                        <div class="flex items-center gap-3">
+                    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
+                        <p class="text-cyan font-bold uppercase tracking-widest text-xs mb-2 text-center">Sci-Fi Series</p>
+                        <h3 class="text-4xl font-extrabold mb-4 text-center">Galactic Voyage</h3>
+                        <div class="flex items-center gap-3 justify-center">
                             <img src="https://i.pravatar.cc/150?u=a1"
                                 class="w-10 h-10 rounded-full border-2 border-primary" alt="Artist">
                             <span class="font-bold">By Commander X</span>
@@ -324,10 +324,10 @@
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         alt="Coll 2">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent"></div>
-                    <div class="absolute bottom-10 left-10">
-                        <p class="text-pink font-bold uppercase tracking-widest text-xs mb-2">Architecture</p>
-                        <h3 class="text-4xl font-extrabold mb-4">Crystal Citadels</h3>
-                        <div class="flex items-center gap-3">
+                    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
+                        <p class="text-pink font-bold uppercase tracking-widest text-xs mb-2 text-center">Architecture</p>
+                        <h3 class="text-4xl font-extrabold mb-4 text-center">Crystal Citadels</h3>
+                        <div class="flex items-center gap-3 justify-center">
                             <img src="https://i.pravatar.cc/150?u=a2"
                                 class="w-10 h-10 rounded-full border-2 border-primary" alt="Artist">
                             <span class="font-bold">By ArchiTech</span>
@@ -340,10 +340,10 @@
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         alt="Coll 3">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
-                    <div class="absolute bottom-10 left-10">
-                        <p class="text-primary font-bold uppercase tracking-widest text-xs mb-2">Abstract</p>
-                        <h3 class="text-4xl font-extrabold mb-4">Neon Pulse</h3>
-                        <div class="flex items-center gap-3">
+                    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
+                        <p class="text-primary font-bold uppercase tracking-widest text-xs mb-2 text-center">Abstract</p>
+                        <h3 class="text-4xl font-extrabold mb-4 text-center">Neon Pulse</h3>
+                        <div class="flex items-center gap-3 justify-center">
                             <img src="https://i.pravatar.cc/150?u=a3"
                                 class="w-10 h-10 rounded-full border-2 border-primary" alt="Artist">
                             <span class="font-bold">By GlowMaster</span>
@@ -357,19 +357,23 @@
         <section class="py-24 px-6 lg:px-12 bg-dark/50 border-y border-white/5">
             <h2 class="text-5xl font-['Outfit'] font-bold mb-16 text-center">Top <span class="text-cyan">Artists</span>
             </h2>
-            <div class="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 <!-- Artist item repeated 12 times in real build, here 6 for sample -->
                 <a href="artists.html" class="glass-card p-6 rounded-3xl flex flex-col items-center group">
                     <div class="relative mb-4">
-                        <img src="https://i.pravatar.cc/150?u=1"
+                        <img src="https://i.pravatar.cc/150?u=julian"
                             class="w-24 h-24 rounded-full border-4 border-white/10 group-hover:border-primary transition-all"
                             alt="Avatar">
                         <div
                             class="absolute -top-2 -right-2 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
                             1</div>
                     </div>
-                    <h4 class="text-lg font-bold mb-1">Alex Riva</h4>
-                    <p class="text-sm text-cyan font-bold">2,450 ETH</p>
+                    <h4 class="text-lg font-bold mb-1">Julian Vantrose</h4>
+                    <p class="text-sm text-cyan font-bold">2.1k ETH</p>
+                    <p class="text-xs text-white/40 mt-1 text-center">The Neo-Classical Mastery</p>
+                    <p class="text-xs text-white/40 mt-1 text-center">Followers: 142</p>
+                    <p class="text-xs text-white/50 text-center">Creations: 8.4k</p>
+                    <p class="text-xs text-white/50 text-center">Avg. Price: 0.25 ETH</p>
                 </a>
                 <a href="artists.html" class="glass-card p-6 rounded-3xl flex flex-col items-center group">
                     <div class="relative mb-4">
@@ -380,8 +384,8 @@
                             class="absolute -top-2 -right-2 bg-cyan text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
                             2</div>
                     </div>
-                    <h4 class="text-lg font-bold mb-1">Mora Sol</h4>
-                    <p class="text-sm text-cyan font-bold">1,820 ETH</p>
+                    <h4 class="text-lg font-bold mb-1">Alex Riva</h4>
+                    <p class="text-sm text-cyan font-bold">2,450 ETH</p>
                 </a>
                 <a href="artists.html" class="glass-card p-6 rounded-3xl flex flex-col items-center group">
                     <div class="relative mb-4">
@@ -392,8 +396,8 @@
                             class="absolute -top-2 -right-2 bg-pink text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
                             3</div>
                     </div>
-                    <h4 class="text-lg font-bold mb-1">Dope Art</h4>
-                    <p class="text-sm text-cyan font-bold">1,645 ETH</p>
+                    <h4 class="text-lg font-bold mb-1">Mora Sol</h4>
+                    <p class="text-sm text-cyan font-bold">1,820 ETH</p>
                 </a>
                 <a href="artists.html" class="glass-card p-6 rounded-3xl flex flex-col items-center group">
                     <div class="relative mb-4">
@@ -404,8 +408,8 @@
                             class="absolute -top-2 -right-2 bg-white/40 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
                             4</div>
                     </div>
-                    <h4 class="text-lg font-bold mb-1">Zen Master</h4>
-                    <p class="text-sm text-cyan font-bold">980 ETH</p>
+                    <h4 class="text-lg font-bold mb-1">Dope Art</h4>
+                    <p class="text-sm text-cyan font-bold">1,645 ETH</p>
                 </a>
                 <a href="artists.html" class="glass-card p-6 rounded-3xl flex flex-col items-center group">
                     <div class="relative mb-4">
@@ -416,8 +420,8 @@
                             class="absolute -top-2 -right-2 bg-white/40 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
                             5</div>
                     </div>
-                    <h4 class="text-lg font-bold mb-1">Cyber Ghoul</h4>
-                    <p class="text-sm text-cyan font-bold">820 ETH</p>
+                    <h4 class="text-lg font-bold mb-1">Zen Master</h4>
+                    <p class="text-sm text-cyan font-bold">980 ETH</p>
                 </a>
                 <a href="artists.html" class="glass-card p-6 rounded-3xl flex flex-col items-center group">
                     <div class="relative mb-4">
@@ -490,16 +494,16 @@
                 </div>
             </div>
             <div class="w-full xl:w-1/2 grid grid-cols-2 gap-6">
-                <div class="rounded-3xl overflow-hidden h-[200px] sm:h-[300px] border border-white/10"><img
+                <div class="rounded-3xl overflow-hidden h-[300px] border border-white/10"><img
                         src="https://images.unsplash.com/photo-1621252179027-94459d278660?q=80&w=800&auto=format&fit=crop"
                         class="w-full h-full object-cover" alt="Auc 1"></div>
-                <div class="rounded-3xl overflow-hidden h-[200px] sm:h-[300px] border border-white/10 lg:mt-12"><img
+                <div class="rounded-3xl overflow-hidden h-[300px] border border-white/10"><img
                         src="https://tse3.mm.bing.net/th/id/OIP.ypCxKsHMZ4hYT7ZBudRHOwAAAA?w=474&h=474&rs=1&pid=ImgDetMain&o=7&rm=3"
                         class="w-full h-full object-cover" alt="Auc 2"></div>
-                <div class="rounded-3xl overflow-hidden h-[200px] sm:h-[300px] border border-white/10 lg:-mt-12"><img
+                <div class="rounded-3xl overflow-hidden h-[300px] border border-white/10"><img
                         src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
                         class="w-full h-full object-cover" alt="Auc 3"></div>
-                <div class="rounded-3xl overflow-hidden h-[200px] sm:h-[300px] border border-white/10"><img
+                <div class="rounded-3xl overflow-hidden h-[300px] border border-white/10"><img
                         src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800&auto=format&fit=crop"
                         class="w-full h-full object-cover" alt="Auc 4"></div>
             </div>
@@ -624,8 +628,6 @@
                 </div>
             </div>
         </section>
-
-        <section class="py-24 px-6 lg:px-12 bg-dark">
             <h2 class="text-4xl md:text-5xl font-['Outfit'] font-extrabold mb-20 text-center">Join the <span
                     class="text-cyan">Movement</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
@@ -635,24 +637,28 @@
                         class="w-20 h-20 bg-primary/20 rounded-3xl flex items-center justify-center mb-8 border border-primary/30 group-hover:scale-110 transition-transform">
                         <i data-lucide="wallet" class="w-10 h-10 text-primary"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Setup Your Wallet</h3>
-                    <p class="text-white/40 leading-relaxed mb-8">Connect your wallet with a single click. We support
+                    <h3 class="text-2xl font-bold mb-4 text-center">Setup Your Wallet</h3>
+                    <p class="text-white/40 leading-relaxed mb-8 text-center">Connect your wallet with a single click. We support
                         MetaMask, Coinbase, and WalletConnect.</p>
-                    <a href="#"
-                        class="text-primary font-bold hover:text-white transition-colors flex items-center justify-center gap-2">Read
-                        Guide <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    <div class="mt-auto">
+                        <a href="#"
+                            class="text-primary font-bold hover:text-white transition-colors flex items-center justify-center gap-2">Read
+                            More</a>
+                    </div>
                 </div>
                 <!-- Step 2 -->
-                <div class="relative p-10 glass-card rounded-[40px] text-center">
+                <div class="p-10 glass-card rounded-[40px] text-center flex flex-col">
                     <div
                         class="w-20 h-20 bg-cyan/20 rounded-3xl flex items-center justify-center mx-auto mb-8 border border-cyan/30">
                         <i data-lucide="layout-grid" class="w-10 h-10 text-cyan"></i>
                     </div>
-                    <h4 class="text-2xl font-bold mb-4">Create Collection</h4>
-                    <p class="text-white/50 leading-relaxed">Organize your art into curated collections for collectors.
+                    <h4 class="text-2xl font-bold mb-4 text-center">Create Collection</h4>
+                    <p class="text-white/50 leading-relaxed text-center">Organize your art into curated collections for collectors.
                     </p>
-                    <div class="hidden xl:block absolute -right-5 top-1/2 -translate-y-1/2 text-white/10">
-                        <i data-lucide="chevron-right" class="w-10 h-10"></i>
+                    <div class="mt-auto">
+                        <a href="#"
+                            class="text-cyan font-bold hover:text-white transition-colors flex items-center justify-center gap-2">Read
+                            More</a>
                     </div>
                 </div>
                 <!-- Step 3 -->
@@ -661,34 +667,39 @@
                         class="w-20 h-20 bg-cyan/20 rounded-3xl flex items-center justify-center mb-8 border border-cyan/30 group-hover:scale-110 transition-transform">
                         <i data-lucide="image" class="w-10 h-10 text-cyan"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Create & List</h3>
-                    <p class="text-white/40 leading-relaxed mb-8">Upload your high-fidelity artwork and set up your
+                    <h3 class="text-2xl font-bold mb-4 text-center">Create & List</h3>
+                    <p class="text-white/40 leading-relaxed mb-8 text-center">Upload your high-fidelity artwork and set up your
                         official collection on our platform.</p>
-                    <a href="#"
-                        class="text-cyan font-bold hover:text-white transition-colors flex items-center justify-center gap-2">Start
-                        Minting <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    <div class="mt-auto">
+                        <a href="#"
+                            class="text-cyan font-bold hover:text-white transition-colors flex items-center justify-center gap-2">Read
+                            More</a>
+                    </div>
                 </div>
                 <!-- Step 4 -->
-                <div class="p-10 glass-card rounded-[40px] text-center">
+                <div class="p-10 glass-card rounded-[40px] text-center flex flex-col">
                     <div
                         class="w-20 h-20 bg-primary/20 rounded-3xl flex items-center justify-center mx-auto mb-8 border border-primary/30">
                         <i data-lucide="tag" class="w-10 h-10 text-primary"></i>
                     </div>
-                    <h4 class="text-2xl font-bold mb-4">List for Sale</h4>
-                    <p class="text-white/50 leading-relaxed">Choose between fixed price or timed auctions.</p>
+                    <h4 class="text-2xl font-bold mb-4 text-center">List for Sale</h4>
+                    <p class="text-white/50 leading-relaxed text-center">Choose between fixed price or timed auctions.</p>
+                    <div class="mt-auto">
+                        <a href="#"
+                            class="text-primary font-bold hover:text-white transition-colors flex items-center justify-center gap-2">Read
+                            More</a>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <!-- 9. TESTIMONIALS -->
         <section class="py-24 px-6 lg:px-12 bg-dark/50 overflow-hidden relative">
             <div class="relative z-10">
                 <h2 class="text-5xl font-['Outfit'] font-bold mb-16 px-4 text-center">Trusted by <span
                         class="text-pink">Global
                         Artists</span></h2>
-                <div class="flex gap-6 px-4 sm:px-8 lg:px-12 animate-scroll hover:pause">
+                <div class="flex flex-col lg:flex-row gap-6 px-4 sm:px-8 lg:px-12 items-center justify-center">
                     <!-- Feedback card pattern repeated -->
-                    <div class="min-w-[320px] sm:min-w-[400px] glass-card p-8 sm:p-10 rounded-[32px]">
+                    <div class="w-full lg:w-auto lg:min-w-[400px] glass-card p-8 sm:p-10 rounded-[32px]">
                         <div class="flex justify-center gap-1 mb-6">
                             <i data-lucide="star" class="w-5 h-5 fill-primary text-primary"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-primary text-primary"></i>
@@ -699,7 +710,7 @@
                         <p class="text-lg sm:text-xl italic mb-8 leading-relaxed text-center">"The most intuitive NFT
                             platform I've
                             ever used.
-                            The gas fees are low and the community is incredible."</p>
+                            The gas fees are low and community is incredible."</p>
                         <div class="flex flex-col items-center text-center gap-4">
                             <img src="https://i.pravatar.cc/150?u=test1" class="w-14 h-14 rounded-full" alt="User">
                             <div>
@@ -708,7 +719,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="min-w-[320px] sm:min-w-[400px] glass-card p-8 sm:p-10 rounded-[32px]">
+                    <div class="w-full lg:w-auto lg:min-w-[400px] glass-card p-8 sm:p-10 rounded-[32px]">
                         <div class="flex justify-center gap-1 mb-6">
                             <i data-lucide="star" class="w-5 h-5 fill-primary text-primary"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-primary text-primary"></i>
@@ -807,11 +818,11 @@
                         class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-cyan hover:border-cyan hover:-translate-y-2 transition-all"><i
                             data-lucide="twitter"></i></a>
                     <a href="#"
-                        class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-primary hover:border-primary hover:-translate-y-2 transition-all"><i
-                            data-lucide="discord"></i></a>
-                    <a href="#"
                         class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-pink hover:border-pink hover:-translate-y-2 transition-all"><i
                             data-lucide="instagram"></i></a>
+                    <a href="#"
+                        class="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/50 hover:text-primary hover:border-primary hover:-translate-y-2 transition-all"><i
+                            data-lucide="facebook"></i></a>
                 </div>
             </div>
 
